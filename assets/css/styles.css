@@ -1,0 +1,609 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+header {
+    position: fixed; /* Keeps the header fixed to the top */
+    top: 0;
+    left: -15px;
+    width: 100%;
+    background-color: rgb(14, 59, 2);
+    color: white;
+    display: flex;
+    justify-content: space-around; /* Centers the content horizontally */
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000; /* Keeps the header above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for visual separation */
+}
+
+/*Footer Bar Icon*/
+
+/* Footer styling */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(14, 59, 2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000; /* Keeps footer above other content */
+}
+
+/* Footer icons container */
+.footer-icons {
+    display: flex;
+    gap: 50px;
+}
+
+/* Individual icon styling */
+.footer-icon img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.footer-icon img:hover {
+    opacity: 0.8;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing as needed */
+}
+
+.footer-icon {
+    text-align: center; /* Center align text under icons */
+    color: white; /* Change to desired text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-icon span {
+    display: block; /* Ensure the span is block-level */
+    margin-top: 5px; /* Space between icon and title */
+    font-size: 8px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px 5px;
+    }
+    
+    .footer-icons {
+        gap: 50px;
+    }
+    
+    .footer-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.hamburger, .cart-icon, .close {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu {
+    position: fixed;
+    left: -250px; /* Hide off-screen */
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(14, 59, 2);
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.menu .close {
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu.show {
+    left: 0; /* Slide in */
+}
+
+
+/* -----Shortcuts-----*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+	margin-top: 0px;
+}
+
+.shortcut-bar {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shortcut-bar img:hover {
+    transform: scale(1.5);
+}
+
+.shortcut-item {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    color: #333;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.shortcut-item img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.shortcut-item span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.productitem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    gap: 20px;
+    padding: 20px;
+	margin-top: 10px; /* Adjust margin to match header height */
+}
+
+.productitem {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.productitem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .productitem-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    }
+}
+
+.items {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .items img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    gap: 20px;
+    padding: 20px;
+	margin-top: 10px; /* Adjust margin to match header height */
+}
+
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    }
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.product:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+./* Responsive adjustments */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
+
+.add-to-cart-button {
+    background-color: rgb(14, 59, 2); /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+	width: 100%;
+}
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            max-width: 500px; /* Limit the width */
+            border-radius: 8px; /* Rounded corners */
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-buttons {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+}
+
+.cart-item-buttons button {
+    padding: 5px 10px;
+}
+
+.cart-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0; /* Add some space between buttons */
+    width: calc(100% - 20px); /* Full width with padding */
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+	margin-top: 100px;
+}
+
+#searchInput {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#categoryFilter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ #search-container {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    width: 85%;
+    max-width: 500px; /* Adjust max-width as needed */
+    padding: 0 25px;
+    margin-top: 100px;
+}
+
+ #search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-input:focus {
+    border-color: #0056b3;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: rgb(14, 59, 2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#search-results {
+    margin-top: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.cta-button {
+    background: rgb(14, 59, 2); /* Button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #218838; /* Hover color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: auto; /* Allow height to adjust */
+    }
+
+    .background-image {
+        height: auto; /* Allow image height to adjust */
+        width: 100%; /* Ensure full width */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+    }
+}
+
+p {
+	font-size: 1.3rem;
+	color: grey;
+}
+
+.uniqueh1 {
+    justify-content: center;
+    display: flex;
+    margin-right: 0%;
+}
+
+.duration {
+	justify-content: center;
+    display: flex;
+    margin-right: 0%;
+}
+
+/*---Newletter Sign Up---*/
+
+.newsletter-container {
+	display: flex;
+	justify-content: center;
+}
+.newsletter {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; /* Limit max width for larger screens */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.subscribe-button {
+    background-color: rgb(14, 59, 2); /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+	width: 100%;
+}
+
+.subscribe-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+button:hover {
+    background: #218838;
+}
+/* -----FEATURED ITEMS BEGIN-----*/
+.featured-items {
+    overflow: hidden;
+    padding: 20px;
+}
+
+.featured-items-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+}
+
+.item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.item-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.item-price {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .item {
+        width: 150px;
+    }
+}
+
+.social-media {
+    margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center; /* Center the text */
+	margin-bottom: 100px;
+    }
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007BFF;
+    }
+
+.social-media img {
+    width: 50px; /* Adjust the size of the icons */
+    height: auto;
+    vertical-align: middle;
+    }
+    

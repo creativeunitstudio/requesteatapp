@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+		<a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" class="logo"></a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+    <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="grocery.html">Grocery</a></li>
+			<li><a href="liquor.html">Liquor</a></li>
+			<li><a href="tobacco.html">Tobacco</a></li>
+			<li><a href="promotion.html">On Promotion</a></li>
+            <li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+            <li><a href="vacancies">Vacancies</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        
+        <section class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search grocery..." oninput="filterProducts()">
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="">All Categories</option>
+            <option value="baby">Baby</option>
+			<option value="bath">Bath</option>
+            <option value="bakery">Bakery</option>
+            <option value="coffee &amp; tea">Coffee &amp; Tea</option>
+            <option value="canned food">Canned Food</option>
+            <option value="cereal">Cereal</option>
+            <option value="cleaning">Cleaning</option>
+            <option value="dairy">Dairy Food</option>
+            <option value="drinks">Drinks</option>
+            <option value="essential foods">Essential Foods</option>
+			<option value="meat">Meat</option>
+			<option value="fruit & veg">Fruits & Vegs</option>
+			<option value="medication">Medication</option>
+			<option value="man">Man</option>
+            <option value="snacks">Snacks</option>
+			<option value="spread">Spread & Butter</option>
+			<option value="sauces & dressing">Sauces & Dressing</option>
+            <option value="soup &amp; spices">Soup &amp; Spices</option>
+            <option value="toiletries">Toiletries</option>
+			<option value="women">Women</option>
+            <!-- Add more categories as needed -->
+        </select>
+    </section>
+    
+        <section class="product-grid">
+
+<!---PRODUCT 1--->
+<div class="product" data-category="baby">
+    <img src="products/grocery/product001.jpg" alt="Product 1" class="product-image" id="productImage1">
+    <h3>Huggies Gold Pants Size 3 Megabox 124 Nappies</h3>
+    <p><strong>R 499.99</strong></p>
+    <button onclick="addToCart('Huggies Gold Pants Size 3 Megabox 124 Nappies', 499.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 2--->
+<div class="product" data-category="baby">
+    <img src="products/grocery/product002.jpg" alt="Product 3" class="product-image">
+    <h3>Purity Pouch Mango & Strawberry 110ml 6 Months</h3>
+    <p><strong>R 16.99</strong></p>
+    <button onclick="addToCart('Purity Pouch Mango & Strawberry 110ml 6 Months', 16.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 3--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product003.jpg" alt="Product 4" class="product-image">
+    <h3>Nestle Hot Chocolate Rich & Foamy 500g</h3>
+    <p><strong>R 99.99</strong></p>
+    <button onclick="addToCart('Nestle Hot Chocolate Rich & Foamy 500g', 99.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 4--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product004.jpg" alt="Product 6" class="product-image">
+    <h3>Cadbury Astros 40g</h3>
+    <p><strong>R 14.99</strong></p>
+    <button onclick="addToCart('Cadbury Astros 40g', 14.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 5--->
+<div class="product" data-category="toiletries">
+    <img src="products/grocery/product005.jpg" alt="Product 7" class="product-image">
+    <h3>Baby Soft 2Ply Fresh White Toilet Paper 24 Pack</h3>
+    <p><strong>R 229.99</strong></p>
+    <button onclick="addToCart('Baby Soft 2Ply Fresh White Toilet Paper 24 Pack', 229.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 6--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product006.jpg" alt="Product 8" class="product-image">
+    <h3>Nestle Cremora Creamer 750g</h3>
+    <p><strong>R 72.99</strong></p>
+    <button onclick="addToCart('Nestle Cremora Creamer 750g', 72.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 7--->
+<div class="product" data-category="drinks">
+    <img src="products/grocery/product007.jpg" alt="Product 9" class="product-image">
+    <h3>Brookes Oros Orange Squash 2L</h3>
+    <p><strong>R 47.99</strong></p>
+    <button onclick="addToCart('Brookes Oros Orange Squash 2L', 47.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 8--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product008.jpg" alt="Product 11" class="product-image">
+    <h3>Sunlight Original Dishwashing Liquid 750ml</h3>
+    <p><strong>R 39.99</strong></p>
+    <button onclick="addToCart('Sunlight Original Dishwashing Liquid 750ml', 39.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 9--->
+<div class="product" data-category="cereal">
+    <img src="products/grocery/product009.jpg" alt="Product 12" class="product-image">
+    <h3>Jungle Oats 1kg Cereal Breakfast</h3>
+    <p><strong>R 56.99</strong></p>
+    <button onclick="addToCart('Jungle Oats 1kg Cereal Breakfast', 56.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 10--->
+<div class="product" data-category="canned food">
+    <img src="products/grocery/product010.jpg" alt="Product 14" class="product-image">
+    <h3>Koo Baked Beans in Tomato Sauce 410gr</h3>
+    <p><strong>R 17.99</strong></p>
+    <button onclick="addToCart('Koo Baked Beans in Tomato Sauce 410gr', 17.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 11--->
+<div class="product" data-category="drinks">
+    <img src="products/grocery/product011.jpg" alt="Product 15" class="product-image">
+    <h3>Pepsi Max Plastic Bottle Drink 2L</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Pepsi Max Plastic Bottle Drink 2L', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 12--->
+<div class="product" data-category="sauces & dressing">
+    <img src="products/grocery/product012.jpg" alt="Product 16" class="product-image">
+    <h3>All Gold Tomato Sauce Dressing 700ml</h3>
+    <p><strong>R 44.99</strong></p>
+    <button onclick="addToCart('All Gold Tomato Sauce Dressing 700ml', 44.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 13--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product013.jpg" alt="Product 19" class="product-image">
+    <h3>Kellogs Instant Noodles Chicken 70g x 5</h3>
+    <p><strong>R 42.99</strong></p>
+    <button onclick="addToCart('Kellogs Instant Noodles Chicken 70g x 5', 42.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 14--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product014.jpg" alt="Lays Potato Chips Thai Swt Chillie" class="product-image">
+    <h3>Lays Potato Chips Thai Swt Chillie</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Lays Potato Chips Thai Swt Chillie', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 15--->
+<div class="product" data-category="spread">
+    <img src="products/grocery/product015.jpg" alt="Black Cat Peanut Butter Spread" class="product-image">
+    <h3>Black Cat Peanut Butter Spread</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Black Cat Peanut Butter Spread', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 16--->
+<div class="product" data-category="sauces & dressing">
+    <img src="products/grocery/product016.jpg" alt="Nola Original Mayonnaise 750g" class="product-image">
+    <h3>Nola Original Mayonnaise 750g</h3>
+    <p><strong>R 39.99</strong></p>
+    <button onclick="addToCart('Nola Original Mayonnaise 750g', 39.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 17--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product017.jpg" alt="Doritos Sweet Chilli Snack 145g" class="product-image">
+    <h3>Doritos Sweet Chilli Snack 145g</h3>
+    <p><strong>R 22.99</strong></p>
+    <button onclick="addToCart('Doritos Sweet Chilli Snack 145g', 22.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 18--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product018.jpg" alt="Tastic Rice Long Grain Parboiled 2kg" class="product-image">
+    <h3>Tastic Rice Long Grain Parboiled 2kg</h3>
+    <p><strong>R 54.99</strong></p>
+    <button onclick="addToCart('Tastic Rice Long Grain Parboiled 2kg', 54.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 19--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product019.jpg" alt="Fatti's & Moni's Pasta Screws 500g" class="product-image">
+    <h3>Fatti's & Moni's Pasta Screws 500g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Fatti\'s & Moni\'s Pasta Screws 500g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 20--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product020.jpg" alt="Fatti's and Moni's Macaroni 500g" class="product-image">
+    <h3>Fatti's and Moni's Macaroni 500g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Fatti\'s and Moni\'s Macaroni 500g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 21--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product021.jpg" alt="Maggi Chicken Noodles 5 x 68g" class="product-image">
+    <h3>Maggi Chicken Noodles 5 x 68g</h3>
+    <p><strong>R 42.99</strong></p>
+    <button onclick="addToCart('Maggi Chicken Noodles 5 x 68g', 42.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 22--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product022.jpg" alt="Lays Potato Chips Salted 145g" class="product-image">
+    <h3>Lays Potato Chips Salted 145g</h3>
+    <p><strong>R 22.99</strong></p>
+    <button onclick="addToCart('Lays Potato Chips Salted 145g', 22.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 23--->
+<div class="product" data-category="cereal">
+    <img src="products/grocery/product023.jpg" alt="Kellogs Corn Flakes Original 750g" class="product-image">
+    <h3>Kellogs Corn Flakes Original 750g</h3>
+    <p><strong>R 79.99</strong></p>
+    <button onclick="addToCart('Kellogs Corn Flakes Original 750g', 79.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 24--->
+<div class="product" data-category="cereal">
+    <img src="products/grocery/product024.jpg" alt="Bokomo Weet-Bix Wholegrain 900g" class="product-image">
+    <h3>Bokomo Weet-Bix Wholegrain 900g</h3>
+    <p><strong>R 49.99</strong></p>
+    <button onclick="addToCart('Bokomo Weet-Bix Wholegrain 900g', 49.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 25--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product025.jpg" alt="Simba Creamy Cheddar Flav 145g" class="product-image">
+    <h3>Simba Creamy Cheddar Flav 145g</h3>
+    <p><strong>R 22.99</strong></p>
+    <button onclick="addToCart('Simba Creamy Cheddar Flav 145g', 22.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 26--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product026.jpg" alt="Nik Naks Original Cheese 145g" class="product-image">
+    <h3>Nik Naks Original Cheese 145g</h3>
+    <p><strong>R 18.99</strong></p>
+    <button onclick="addToCart('Nik Naks Original Cheese 145g', 18.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 27--->
+<div class="product" data-category="sauces & dressing">
+    <img src="products/grocery/product027.jpg" alt="Crosse & Blackwell Tangy Mayonnaise 750g" class="product-image">
+    <h3>Crosse & Blackwell Tangy Mayonnaise 750g</h3>
+    <p><strong>R 49.99</strong></p>
+    <button onclick="addToCart('Crosse & Blackwell Tangy Mayonnaise 750g', 49.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 28--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product028.jpg" alt="Crosse & Blackwell Tangy Mayonnaise 750g" class="product-image">
+    <h3>Simba Peanuts 150g</h3>
+    <p><strong>R 29.99</strong></p>
+    <button onclick="addToCart('Simba Peanuts 150g', 29.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 29--->
+<div class="product" data-category="sauces & dressing">
+    <img src="products/grocery/product029.jpg" alt="Mrs HS Balls Original Chutney 470g" class="product-image">
+    <h3>Mrs HS Balls Original Chutney 470g</h3>
+    <p><strong>R 39.99</strong></p>
+    <button onclick="addToCart('Mrs HS Balls Original Chutney 470g', 39.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 30--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product030.jpg" alt="Bakers Tennis Classic Biscuits 200g" class="product-image">
+    <h3>Bakers Tennis Classic Biscuits 200g</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Bakers Tennis Classic Biscuits 200g', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 31--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product031.jpg" alt="Oreo Original Milk Cookie Biscuits 128g" class="product-image">
+    <h3>Oreo Original Milk Cookie Biscuits 128g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Oreo Original Milk Cookie Biscuits 128g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+
+<!---PRODUCT 32--->
+<div class="product" data-category="fruit & veg">
+    <img src="products/grocery/product032.jpg" alt="Full Farm Fresh Cabbage Head" class="product-image">
+    <h3>Full Farm Fresh Cabbage Head</h3>
+    <p><strong>R 16.99</strong></p>
+    <button onclick="addToCart('Full Farm Fresh Cabbage Head', 16.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 33--->
+<div class="product" data-category="canned food">
+    <img src="products/grocery/product033.jpg" alt="Rhodes Chakalaka Hot & Spicy 400g" class="product-image">
+    <h3>Rhodes Chakalaka Hot & Spicy 400g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Rhodes Chakalaka Hot & Spicy 400g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 34--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product034.jpg" alt="Sunlight Original Laundry Bar Soap 500g" class="product-image">
+    <h3>Sunlight Original Laundry Bar Soap 500g</h3>
+    <p><strong>R 23.99</strong></p>
+    <button onclick="addToCart('Sunlight Original Laundry Bar Soap 500g', 23.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 35--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product035.jpg" alt="Sunlight Spring Sensations 2in1 Washing Powder 2kg" class="product-image">
+    <h3>Sunlight Spring Sensations 2in1 Washing Powder 2kg</h3>
+    <p><strong>R 79.99</strong></p>
+    <button onclick="addToCart('Sunlight Spring Sensations 2in1 Washing Powder 2kg', 79.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 36--->
+<div class="product" data-category="women">
+    <img src="products/grocery/product036.jpg" alt="Always Maxi Night Duo 16s Sanitary Pads" class="product-image">
+    <h3>Always Maxi Night Duo 16s Sanitary Pads</h3>
+    <p><strong>R 59.99</strong></p>
+    <button onclick="addToCart('Always Maxi Night Duo 16s Sanitary Pads', 59.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 37--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product037.jpg" alt="Sunlight Multi Purpose Home Cleaning 1l" class="product-image">
+    <h3>Sunlight Multi Purpose Home Cleaning 1l</h3>
+    <p><strong>R 49.99</strong></p>
+    <button onclick="addToCart('Sunlight Multi Purpose Home Cleaning 1l', 49.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 38--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product038.jpg" alt="Sunlight Regular Dishwashing Liquid 1.5l" class="product-image">
+    <h3>Sunlight Regular Dishwashing Liquid 1.5l</h3>
+    <p><strong>R 69.99</strong></p>
+    <button onclick="addToCart('Sunlight Regular Dishwashing Liquid 1.5l', 69.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 39--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product039.jpg" alt="Nescafe Ricoffy Pouch 800g Value Refill" class="product-image">
+    <h3>Nescafe Ricoffy Pouch 800g Value Refill</h3>
+    <p><strong>R 99.99</strong></p>
+    <button onclick="addToCart('Nescafe Ricoffy Pouch 800g Value Refill', 99.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 40--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product040.jpg" alt="Spekko Parboiled Long Grain Rice 10kg" class="product-image">
+    <h3>Spekko Parboiled Long Grain Rice 10kg</h3>
+    <p><strong>R 221.99</strong></p>
+    <button onclick="addToCart('Spekko Parboiled Long Grain Rice 10kg', 221.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 41--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product041.jpg" alt="Ace Super Maize Meal Poly Super 10kg" class="product-image">
+    <h3>Ace Super Maize Meal Poly Super 10kg</h3>
+    <p><strong>R 132.99</strong></p>
+    <button onclick="addToCart('Ace Super Maize Meal Poly Super 10kg', 132.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 42--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product042.jpg" alt="Nescafe Classic Full Bodied Coffee 200g" class="product-image">
+    <h3>Nescafe Classic Full Bodied Coffee 200g</h3>
+    <p><strong>R 129.99</strong></p>
+    <button onclick="addToCart('Nescafe Classic Full Bodied Coffee 200g', 129.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 43--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product043.jpg" alt="Jik Lemon Fresh Scented Bleach 1.5l" class="product-image">
+    <h3>Jik Lemon Fresh Scented Bleach 1.5l</h3>
+    <p><strong>R 42.99</strong></p>
+    <button onclick="addToCart('Jik Lemon Fresh Scented Bleach 1.5l', 42.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 44--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product044.jpg" alt="Adcock Ingram Panado Tablets 24 Tablets" class="product-image">
+    <h3>Adcock Ingram Panado Tablets 24 Tablets</h3>
+    <p><strong>R 34.99</strong></p>
+    <button onclick="addToCart('Adcock Ingram Panado Tablets 24 Tablets', 34.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 45--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product045.jpg" alt="Spekko Rice Parboiled Long Grain 2kg" class="product-image">
+    <h3>Spekko Rice Parboiled Long Grain 2kg</h3>
+    <p><strong>R 47.99</strong></p>
+    <button onclick="addToCart('Spekko Rice Parboiled Long Grain 2kg', 47.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 46--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product046.jpg" alt="Simba Potato Chips Mrs Balls Chutney 120g" class="product-image">
+    <h3>Simba Potato Chips Mrs Balls Chutney 120g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Simba Potato Chips Mrs Balls Chutney 120g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 47--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product047.jpg" alt="Domestos Lemon Stain Removal Thick 750ml" class="product-image">
+    <h3>Domestos Lemon Stain Removal Thick 750ml</h3>
+    <p><strong>R 34.99</strong></p>
+    <button onclick="addToCart('Domestos Lemon Stain Removal Thick 750ml', 34.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 48--->
+<div class="product" data-category="dairy">
+    <img src="products/grocery/product048.jpg" alt="Clover Traditional Plain Feta Cheese 400g" class="product-image">
+    <h3>Clover Traditional Plain Feta Cheese 400g</h3>
+    <p><strong>R 59.99</strong></p>
+    <button onclick="addToCart('Clover Traditional Plain Feta Cheese 400g', 59.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 49--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product049.jpg" alt="Joko Regular Tagless Tea Bags 100 Pack" class="product-image">
+    <h3>Joko Regular Tagless Tea Bags 100 Pack</h3>
+    <p><strong>R 34.99</strong></p>
+    <button onclick="addToCart('Joko Regular Tagless Tea Bags 100 Pack', 34.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 50--->
+<div class="product" data-category="bath">
+    <img src="products/grocery/product050.jpg" alt="Dettol Eventone Pomegranate Soap 175g" class="product-image">
+    <h3>Dettol Eventone Pomegranate Soap 175g</h3>
+    <p><strong>R 18.99</strong></p>
+    <button onclick="addToCart('Dettol Eventone Pomegranate Soap 175g', 18.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 51--->
+<div class="product" data-category="bath">
+    <img src="products/grocery/product051.jpg" alt="Dettol Hygene Soap Fresh 175g" class="product-image">
+    <h3>Dettol Hygene Soap Fresh 175g</h3>
+    <p><strong>R 18.99</strong></p>
+    <button onclick="addToCart('Dettol Hygene Soap Fresh 175g', 18.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 52--->
+<div class="product" data-category="dairy">
+    <img src="products/grocery/product052.jpg" alt="Dairymaid Choc-cara-nilla Ice Cream 1.8L" class="product-image">
+    <h3>Dairymaid Choc-cara-nilla Ice Cream 1.8L</h3>
+    <p><strong>R 77.99</strong></p>
+    <button onclick="addToCart('Dairymaid Choc-cara-nilla Ice Cream 1.8L', 77.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 53--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product053.jpg" alt="Domestos Whitening Thick Bleach Cleaner 750ml" class="product-image">
+    <h3>Domestos Whitening Thick Bleach Cleaner 750ml</h3>
+    <p><strong>R 34.99</strong></p>
+    <button onclick="addToCart('Domestos Whitening Thick Bleach Cleaner 750ml', 34.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 54--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product054.jpg" alt="Domestos Purple Stain Removal Thick 750ml" class="product-image">
+    <h3>Domestos Purple Stain Removal Thick 750ml</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Domestos Purple Stain Removal Thick 750ml', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 55--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product055.jpg" alt="Bakers Eet-Su-Mor Shortbread Biscuits" class="product-image">
+    <h3>Bakers Eet-Su-Mor Shortbread Biscuits</h3>
+    <p><strong>R 29.99</strong></p>
+    <button onclick="addToCart('Bakers Eet-Su-Mor Shortbread Biscuits', 29.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 56--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product056.jpg" alt="Jacobs Kronung Signature Coffee" class="product-image">
+    <h3>Jacobs Kronung Signature Coffee</h3>
+    <p><strong>R 129.99</strong></p>
+    <button onclick="addToCart('Jacobs Kronung Signature Coffee', 129.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 57--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product057.jpg" alt="Huletts Premium White Sugar 2.5kg" class="product-image">
+    <h3>Huletts Premium White Sugar 2.5kg</h3>
+    <p><strong>R 44.99</strong></p>
+    <button onclick="addToCart('Huletts Premium White Sugar 2.5kg', 44.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 58--->
+<div class="product" data-category="dairy">
+    <img src="products/grocery/product058.jpg" alt="Clover Full Cream Milk UHT Process 6 x 1L" class="product-image">
+    <h3>Clover Full Cream Milk UHT Process 6 x 1L</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Clover Full Cream Milk UHT Process 6 x 1L', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 59--->
+<div class="product" data-category="spread">
+    <img src="products/grocery/product059.jpg" alt="Stork Country Spread 40% Fat" class="product-image">
+    <h3>Stork Country Spread 40% Fat</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Stork Country Spread 40% Fat', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 60--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product060.jpg" alt="Selati Springlejoy Pure White Sugar 2.5kg" class="product-image">
+    <h3>Selati Springlejoy Pure White Sugar 2.5kg</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Selati Springlejoy Pure White Sugar 2.5kg', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 61--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product061.jpg" alt="Five Roses Ceylon Blend Tea 102 bags" class="product-image">
+    <h3>Five Roses Ceylon Blend Tea 102 bags</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Five Roses Ceylon Blend Tea 102 bags', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 62--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product062.jpg" alt="Laarger Pure Rooibos 80 bags" class="product-image">
+    <h3>Laarger Pure Rooibos 80 bags</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Laarger Pure Rooibos 80 bags', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 63--->
+<div class="product" data-category="canned">
+    <img src="products/grocery/product063.jpg" alt="Lucky Star Pilchards Tomato Tin Fish 155g" class="product-image">
+    <h3>Lucky Star Pilchards Tomato Tin Fish 155g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Lucky Star Pilchards Tomato Tin Fish 155g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 64--->
+<div class="product" data-category="bath">
+    <img src="products/grocery/product064.jpg" alt="Colgate Triple Action Original 100ml" class="product-image">
+    <h3>Colgate Triple Action Original 100ml</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Colgate Triple Action Original 100ml', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 65--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product065.jpg" alt="Bakers Classic Choc Biscuits 200g" class="product-image">
+    <h3>Bakers Classic Choc Biscuits 200g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Bakers Classic Choc Biscuits 200g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 66--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product066.jpg" alt="Bakers Blue Lable Marie Biscuits 200g" class="product-image">
+    <h3>Bakers Blue Lable Marie Biscuits 200g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Bakers Blue Lable Marie Biscuits 200g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 67--->
+<div class="product" data-category="bakery">
+    <img src="products/grocery/product067.jpg" alt="Golden Cloud Cake Wheat Flour 2.5kg" class="product-image">
+    <h3>Golden Cloud Cake Wheat Flour 2.5kg</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Golden Cloud Cake Wheat Flour 2.5kg', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 68--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product068.jpg" alt="Freshpak Pure Rooibos Tea 80 bags" class="product-image">
+    <h3>Freshpak Pure Rooibos Tea 80 bags</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Freshpak Pure Rooibos Tea 80 bags', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 69--->
+<div class="product" data-category="spread">
+    <img src="products/grocery/product069.jpg" alt="Flora Light Bread Spread 40% Fat" class="product-image">
+    <h3>Flora Light Bread Spread 40% Fat</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Flora Light Bread Spread 40% Fat', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 70--->
+<div class="product" data-category="dairy">
+    <img src="products/grocery/product070.jpg" alt="Clover Low Fat Milk Long Life 6 x 1L" class="product-image">
+    <h3>Clover Low Fat Milk Long Life 6 x 1L</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Clover Low Fat Milk Long Life 6 x 1L', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 71--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product071.jpg" alt="Cadbury Original Lunch Bar Chocolate" class="product-image">
+    <h3>Cadbury Original Lunch Bar Chocolate</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Cadbury Original Lunch Bar Chocolate', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 72--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product072.jpg" alt="Cadbury Dairy Milk Whole Nut" class="product-image">
+    <h3>Cadbury Dairy Milk Whole Nut</h3>
+    <p><strong>R 17.99</strong></p>
+    <button onclick="addToCart('Cadbury Dairy Milk Whole Nut', 17.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 73--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product073.jpg" alt="Nescafe Ricoffy Blended Coffee 750g" class="product-image">
+    <h3>Nescafe Ricoffy Blended Coffee 750g</h3>
+    <p><strong>R 36.99</strong></p>
+    <button onclick="addToCart('Nescafe Ricoffy Blended Coffee 750g', 36.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 74--->
+<div class="product" data-category="bath">
+    <img src="products/grocery/product074.jpg" alt="Protex Fresh Antigerm Bath Soap 150g" class="product-image">
+    <h3>Protex Fresh Antigerm Bath Soap 150g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Protex Fresh Antigerm Bath Soap 150g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 75--->
+<div class="product" data-category="fruit & veg">
+    <img src="products/grocery/product075.jpg" alt="McCain Delicious Mixed Vegetables 1kg" class="product-image">
+    <h3>McCain Delicious Mixed Vegetables 1kg</h3>
+    <p><strong>R 49.99</strong></p>
+    <button onclick="addToCart('McCain Delicious Mixed Vegetables 1kg', 49.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 76--->
+<div class="product" data-category="dairy">
+    <img src="products/grocery/product076.jpg" alt="Danone Ultra Mel Vanilla Flavoured Custard 1L" class="product-image">
+    <h3>Danone Ultra Mel Vanilla Flavoured Custard 1L</h3>
+    <p><strong>R 35.99</strong></p>
+    <button onclick="addToCart('Danone Ultra Mel Vanilla Flavoured Custard 1L', 35.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 77--->
+<div class="product" data-category="man">
+    <img src="products/grocery/product077.jpg" alt="Nivea Men Black & White Fresh Roll On 50ml" class="product-image">
+    <h3>Nivea Men Black & White Fresh Roll On 50ml</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Nivea Men Black & White Fresh Roll On 50ml', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 78--->
+<div class="product" data-category="canned">
+    <img src="products/grocery/product078.jpg" alt="Koo Whole Kernel Corn 410g" class="product-image">
+    <h3>Koo Whole Kernel Corn 410g</h3>
+    <p><strong>R 23.99</strong></p>
+    <button onclick="addToCart('Koo Whole Kernel Corn 410g', 23.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 79--->
+<div class="product" data-category="bakery">
+    <img src="products/grocery/product079.jpg" alt="Snowflake Cake Wheat Flour 2.5kg" class="product-image">
+    <h3>Snowflake Cake Wheat Flour 2.5kg</h3>
+    <p><strong>R 43.99</strong></p>
+    <button onclick="addToCart('Snowflake Cake Wheat Flour 2.5kg', 43.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 80--->
+<div class="product" data-category="drinks">
+    <img src="products/grocery/product080.jpg" alt="Coca-Cola Original Plastic Bottle 2L" class="product-image">
+    <h3>Coca-Cola Original Plastic Bottle 2L</h3>
+    <p><strong>R 26.99</strong></p>
+    <button onclick="addToCart('Coca-Cola Original Plastic Bottle 2L', 26.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 81--->
+<div class="product" data-category="bakery">
+    <img src="products/grocery/product081.jpg" alt="Blue Ribbon White Toaster Bread 700g" class="product-image">
+    <h3>Blue Ribbon White Toaster Bread 700g</h3>
+    <p><strong>R 18.99</strong></p>
+    <button onclick="addToCart('Blue Ribbon White Toaster Bread 700g', 18.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 82--->
+<div class="product" data-category="canned">
+    <img src="products/grocery/product082.jpg" alt="Rhodes Butter Beans in Brine 410g" class="product-image">
+    <h3>Rhodes Butter Beans in Brine 410g</h3>
+    <p><strong>R 26.99</strong></p>
+    <button onclick="addToCart('Rhodes Butter Beans in Brine 410g', 26.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 83--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product083.jpg" alt="Simba Potato Chips Smoked Beef 120g" class="product-image">
+    <h3>Simba Potato Chips Smoked Beef 120g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Simba Potato Chips Smoked Beef 120g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 84--->
+<div class="product" data-category="meat">
+    <img src="products/grocery/product084.jpg" alt="Simba Potato Chips Smoked Beef 120g" class="product-image">
+    <h3>1kg Boere Wors</h3>
+    <p><strong>R 104.99</strong></p>
+    <button onclick="addToCart('1kg Boere Wors', 104.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 85--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product085.jpg" alt="White Star Super Maize Meal 5kg" class="product-image">
+    <h3>White Star Super Maize Meal 5kg</h3>
+    <p><strong>R 69.99</strong></p>
+    <button onclick="addToCart('White Star Super Maize Meal 5kg', 69.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 86--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product086.jpg" alt="Knorr Brown Onion Thickening Soup 50g" class="product-image">
+    <h3>Knorr Brown Onion Thickening Soup 50g</h3>
+    <p><strong>R 7.99</strong></p>
+    <button onclick="addToCart('Knorr Brown Onion Thickening Soup 50g', 7.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 87--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product087.jpg" alt="Knorr Mild Breyani Rice Mate 275g" class="product-image">
+    <h3>Knorr Mild Breyani Rice Mate 275g</h3>
+    <p><strong>R 39.99</strong></p>
+    <button onclick="addToCart('Knorr Mild Breyani Rice Mate 275g', 39.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 88--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product088.jpg" alt="Sunlight Tropical Sensations 2in1 Powder 2kg" class="product-image">
+    <h3>Sunlight Tropical Sensations 2in1 Powder 2kg</h3>
+    <p><strong>R 79.99</strong></p>
+    <button onclick="addToCart('Sunlight Tropical Sensations 2in1 Powder 2kg', 79.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 89--->
+<div class="product" data-category="cleaning">
+    <img src="products/grocery/product089.jpg" alt="Sunlight Summer Sensations 2in1 Auto Washing 2kg" class="product-image">
+    <h3>Sunlight Summer Sensations 2in1 Auto Washing 2kg</h3>
+    <p><strong>R 79.99</strong></p>
+    <button onclick="addToCart('Sunlight Summer Sensations 2in1 Auto Washing 2kg', 79.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 90--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product090.jpg" alt="Nestle Kitkat 8 Finger Milk Chocolate Bar 85g" class="product-image">
+    <h3>Nestle Kitkat 8 Finger Milk Chocolate Bar 85g</h3>
+    <p><strong>R 24.99</strong></p>
+    <button onclick="addToCart('Nestle Kitkat 8 Finger Milk Chocolate Bar 85g', 24.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 91--->
+<div class="product" data-category="coffee & tea">
+    <img src="products/grocery/product091.jpg" alt="Nestle Milo Malt Powder Drink 500g" class="product-image">
+    <h3>Nestle Milo Malt Powder Drink 500g</h3>
+    <p><strong>R 89.99</strong></p>
+    <button onclick="addToCart('Nestle Milo Malt Powder Drink 500g', 89.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 92--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product092.jpg" alt="Fatti's & Moni's Spaghetti 500g" class="product-image">
+    <h3>Fatti's & Moni's Spaghetti 500g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Fatti\'s & Moni\'s Spaghetti 500g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 93--->
+<div class="product" data-category="drinks">
+    <img src="products/grocery/product093.jpg" alt="Liqui-Fruit Cranberry Cooler Juice 1L" class="product-image">
+    <h3>Liqui-Fruit Cranberry Cooler Juice 1L</h3>
+    <p><strong>R 36.99</strong></p>
+    <button onclick="addToCart('Liqui-Fruit Cranberry Cooler Juice 1L', 36.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 94--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product094.jpg" alt="Sunfoil Pure Sunflower Cooking Oil 5L" class="product-image">
+    <h3>Sunfoil Pure Sunflower Cooking Oil 5L</h3>
+    <p><strong>R 184.99</strong></p>
+    <button onclick="addToCart('Sunfoil Pure Sunflower Cooking Oil 5L', 184.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 95--->
+<div class="product" data-category="bath">
+    <img src="products/grocery/product095.jpg" alt="Vaseline Blue Seal Original Pure Petroleum Jelly 450ml" class="product-image">
+    <h3>Vaseline Blue Seal Original Pure Petroleum Jelly 450ml</h3>
+    <p><strong>R 69.99</strong></p>
+    <button onclick="addToCart('Vaseline Blue Seal Original Pure Petroleum Jelly 450ml', 69.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 96--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product096.jpg" alt="Knorrox Beef Stock Cubes Meaty Flav 24 x 10g" class="product-image">
+    <h3>Knorrox Beef Stock Cubes Meaty Flav 24 x 10g</h3>
+    <p><strong>R 26.99</strong></p>
+    <button onclick="addToCart('Knorrox Beef Stock Cubes Meaty Flav 24 x 10g', 26.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 97--->
+<div class="product" data-category="women">
+    <img src="products/grocery/product097.jpg" alt="Kotex Maxi Thick Pads - All Nighter 8 Pack Plus Wings" class="product-image">
+    <h3>Kotex Maxi Thick Pads - All Nighter 8 Pack Plus Wings</h3>
+    <p><strong>R 24.99</strong></p>
+    <button onclick="addToCart('Kotex Maxi Thick Pads - All Nighter 8 Pack Plus Wings', 24.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 98--->
+<div class="product" data-category="frozen">
+    <img src="products/grocery/product098.jpg" alt="Sea Harvest Fish Fingers Frozen 600g" class="product-image">
+    <h3>Sea Harvest Fish Fingers Frozen 600g</h3>
+    <p><strong>R 81.99</strong></p>
+    <button onclick="addToCart('Sea Harvest Fish Fingers Frozen 600g', 81.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 99--->
+<div class="product" data-category="canned">
+    <img src="products/grocery/product099.jpg" alt="Bull Brand Corned Meat & Cereal Tin 300g" class="product-image">
+    <h3>Bull Brand Corned Meat & Cereal Tin 300g</h3>
+    <p><strong>R 39.99</strong></p>
+    <button onclick="addToCart('Bull Brand Corned Meat & Cereal Tin 300g', 39.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 100--->
+<div class="product" data-category="cereal">
+    <img src="products/grocery/product100.jpg" alt="Kellogg's All Bran Breakfast Flakes 750g" class="product-image">
+    <h3>Kellogg's All Bran Breakfast Flakes 750g</h3>
+    <p><strong>R 79.99</strong></p>
+    <button onclick="addToCart('Kellogg\'s All Bran Breakfast Flakes 750g', 79.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 101--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product101.jpg" alt="Product 2" class="product-image">
+    <h3>Spekko Long Grain Rice Parboiled Rice 5kg</h3>
+    <p><strong>R 109.99</strong></p>
+    <button onclick="addToCart('Spekko Long Grain Rice Parboiled Rice 5kg', 109.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 102--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product102.jpg" alt="Product 5" class="product-image">
+    <h3>King Korn Fine Mabele Meal 1kg</h3>
+    <p><strong>R 59.99</strong></p>
+    <button onclick="addToCart('King Korn Fine Mabele Meal 1kg', 59.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 103--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product103.jpg" alt="Product 10" class="product-image">
+    <h3>Iwisa No1 Original Maize Rice 1kg</h3>
+    <p><strong>R 109.99</strong></p>
+    <button onclick="addToCart('Iwisa No1 Original Maize Rice 1kg', 109.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 104--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product104.jpg" alt="Product 13" class="product-image">
+    <h3>Tastic Long Grain Parboiled Rice 500g</h3>
+    <p><strong>R 18.99</strong></p>
+    <button onclick="addToCart('Tastic Long Grain Parboiled Rice 500g', 18.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 105--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product105.jpg" alt="Product 17" class="product-image">
+    <h3>Tastic Long Grain Parboiled Rice 1kg</h3>
+    <p><strong>R 29.99</strong></p>
+    <button onclick="addToCart('Tastic Long Grain Parboiled Rice 1kg', 29.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 106--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product106.jpg" alt="Product 18" class="product-image">
+    <h3>Ace Plain White Samp Low Fat 2.5kg</h3>
+    <p><strong>R 29.99</strong></p>
+    <button onclick="addToCart('Ace Plain White Samp Low Fat 2.5kg', 29.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 107--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product107.jpg" alt="Product 20" class="product-image">
+    <h3>Tastic Long Grain Parboiled Rice 10kg</h3>
+    <p><strong>R 184.99</strong></p>
+    <button onclick="addToCart('Tastic Long Grain Parboiled Rice 10kg', 184.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 108--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product108.jpg" alt="Iwisa No1 Original White Samp 2.5kg" class="product-image">
+    <h3>Iwisa No1 Original White Samp 2.5kg</h3>
+    <p><strong>R 44.99</strong></p>
+    <button onclick="addToCart('Iwisa No1 Original White Samp 2.5kg', 44.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 109--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product109.jpg" alt="White Star Super Maize Meal 10kg" class="product-image">
+    <h3>White Star Super Maize Meal 10kg</h3>
+    <p><strong>R 139.99</strong></p>
+    <button onclick="addToCart('White Star Super Maize Meal 10kg', 139.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 110--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product110.jpg" alt="Ace Super Maize Meal 5kg" class="product-image">
+    <h3>Ace Super Maize Meal 5kg</h3>
+    <p><strong>R 114.99</strong></p>
+    <button onclick="addToCart('Ace Super Maize Meal 5kg', 114.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 111--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product111.jpg" alt="Excella Rice Long Grain Parboiled 2kg" class="product-image">
+    <h3>Excella Rice Long Grain Parboiled 2kg</h3>
+    <p><strong>R 42.99</strong></p>
+    <button onclick="addToCart('Excella Rice Long Grain Parboiled 2kg', 42.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 112--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product112.jpg" alt="Tastic Rice Long Grain Parboiled 5kg" class="product-image">
+    <h3>Tastic Rice Long Grain Parboiled 5kg</h3>
+    <p><strong>R 134.99</strong></p>
+    <button onclick="addToCart('Tastic Rice Long Grain Parboiled 5kg', 134.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 113--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product113.jpg" alt="Tastic Rice Long Grain Parboiled 5kg" class="product-image">
+    <h3>Royco Rich Oxtail Soup 50g</h3>
+    <p><strong>R 7.99</strong></p>
+    <button onclick="addToCart('Royco Rich Oxtail Soup 50g', 7.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 114--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product114.jpg" alt="Iwisa No1 Super Maize Meal 10kg" class="product-image">
+    <h3>Iwisa No1 Super Maize Meal 10kg</h3>
+    <p><strong>R 129.99</strong></p>
+    <button onclick="addToCart('Iwisa No1 Super Maize Meal 10kg', 129.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 115--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product115.jpg" alt="Product" class="product-image">
+    <h3>Robertsons Garlic Salt Refill 50g</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Robertsons Garlic Salt Refill 50g', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 116--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product116.jpg" alt="King Foods King Korn Home Brew Malt 1kg" class="product-image">
+    <h3>King Foods King Korn Home Brew Malt 1kg</h3>
+    <p><strong>R 27.99</strong></p>
+    <button onclick="addToCart('King Foods King Korn Home Brew Malt 1kg', 27.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 117--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product117.jpg" alt="Iwisa No1 Super Maize Meal 5kg" class="product-image">
+    <h3>Iwisa No1 Super Maize Meal 5kg</h3>
+    <p><strong>R 72.99</strong></p>
+    <button onclick="addToCart('Iwisa No1 Super Maize Meal 5kg', 72.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 118--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product118.jpg" alt="White Star Super Maize Meal 1kg" class="product-image">
+    <h3>White Star Super Maize Meal 1kg</h3>
+    <p><strong>R 18.99</strong></p>
+    <button onclick="addToCart('White Star Super Maize Meal 1kg', 18.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 119--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product119.jpg" alt="White Star Super Maize Meal 2.5kg" class="product-image">
+    <h3>White Star Super Maize Meal 2.5kg</h3>
+    <p><strong>R 39.99</strong></p>
+    <button onclick="addToCart('White Star Super Maize Meal 2.5kg', 39.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 120--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product120.jpg" alt="Iwisa No1 Super Maize Meal 1kg" class="product-image">
+    <h3>Iwisa No1 Super Maize Meal 1kg</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Iwisa No1 Super Maize Meal 1kg', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 121--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product121.jpg" alt="Super White Maize Meal Poly Bag 10kg" class="product-image">
+    <h3>Super White Maize Meal Poly Bag 10kg</h3>
+    <p><strong>R 119.99</strong></p>
+    <button onclick="addToCart('Super White Maize Meal Poly Bag 10kg', 119.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 122--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product122.jpg" alt="Cadbury Ps Duo Chocolate 60g" class="product-image">
+    <h3>Cadbury Ps Duo Chocolate 60g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Cadbury Ps Duo Chocolate 60g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 123--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product123.jpg" alt="Cadbury Chomp Large Chocolate" class="product-image">
+    <h3>Cadbury Chomp Large Chocolate</h3>
+    <p><strong>R 6.99</strong></p>
+    <button onclick="addToCart('Cadbury Chomp Large Chocolate', 6.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 124--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product124.jpg" alt="Cadbury Crunchie Chocolate Bar Large" class="product-image">
+    <h3>Cadbury Crunchie Chocolate Bar Large</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Cadbury Crunchie Chocolate Bar Large', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 125--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product125.jpg" alt="Cadbury Ps Caramilk Chocolate Bar" class="product-image">
+    <h3>Cadbury Ps Caramilk Chocolate Bar</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Cadbury Ps Caramilk Chocolate Bar', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 126--->
+<div class="product" data-category="dairy">
+    <img src="products/grocery/product126.jpg" alt="Inkomazi Medium Fat Maas 1.8Kg" class="product-image">
+    <h3>Inkomazi Medium Fat Maas 1.8Kg</h3>
+    <p><strong>R 42.99</strong></p>
+    <button onclick="addToCart('Inkomazi Medium Fat Maas 1.8Kg', 42.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 127--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product127.jpg" alt="Sunfoil Sunflower Cooking Oil 750ml" class="product-image">
+    <h3>Sunfoil Sunflower Cooking Oil 750ml</h3>
+    <p><strong>R 35.99</strong></p>
+    <button onclick="addToCart('Sunfoil Sunflower Cooking Oil 750ml', 35.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 128--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product128.jpg" alt="Bakers Topper Chocolate Biscuits 125g" class="product-image">
+    <h3>Bakers Topper Chocolate Biscuits 125g</h3>
+    <p><strong>R 12.99</strong></p>
+    <button onclick="addToCart('Bakers Topper Chocolate Biscuits 125g', 12.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 129--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product129.jpg" alt="Nestle Aero Milk Chocolate 85g" class="product-image">
+    <h3>Nestle Aero Milk Chocolate 85g</h3>
+    <p><strong>R 24.99</strong></p>
+    <button onclick="addToCart('Nestle Aero Milk Chocolate 85g', 24.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 130--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product130.jpg" alt="Cadbury Lunch Bar Dream Large 48g" class="product-image">
+    <h3>Cadbury Lunch Bar Dream Large 48g</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Cadbury Lunch Bar Dream Large 48g', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 131--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product131.jpg" alt="Nestle Aero Peppermint Milk Choc 85g" class="product-image">
+    <h3>Nestle Aero Peppermint Milk Choc 85g</h3>
+    <p><strong>R 24.99</strong></p>
+    <button onclick="addToCart('Nestle Aero Peppermint Milk Choc 85g', 24.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 132--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product132.jpg" alt="Compral Pain Relief Tablets 100 Pack" class="product-image">
+    <h3>Compral Pain Relief Tablets 100 Pack</h3>
+    <p><strong>R 107.99</strong></p>
+    <button onclick="addToCart('Compral Pain Relief Tablets 100 Pack', 107.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 133--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product133.jpg" alt="Excella Sunflower Cooking Oil 750ml" class="product-image">
+    <h3>Excella Sunflower Cooking Oil 750ml</h3>
+    <p><strong>R 35.99</strong></p>
+    <button onclick="addToCart('Excella Sunflower Cooking Oil 750ml', 35.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 134--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product134.jpg" alt="Hercules Castor Oil Orange 100ml" class="product-image">
+    <h3>Hercules Castor Oil Orange 100ml</h3>
+    <p><strong>R 31.99</strong></p>
+    <button onclick="addToCart('Hercules Castor Oil Orange 100ml', 31.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 135--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product135.jpg" alt="Sunfoil Sunflower Cooking Oil 2L" class="product-image">
+    <h3>Sunfoil Sunflower Cooking Oil 2L</h3>
+    <p><strong>R 79.99</strong></p>
+    <button onclick="addToCart('Sunfoil Sunflower Cooking Oil 2L', 79.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 136--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product136.jpg" alt="Linctagon-C Effervescent Tablet 12" class="product-image">
+    <h3>Linctagon-C Effervescent Tablet 12</h3>
+    <p><strong>R 129.99</strong></p>
+    <button onclick="addToCart('Linctagon-C Effervescent Tablet 12', 129.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 137--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product137.jpg" alt="Panado Effervescent Tablets 16s" class="product-image">
+    <h3>Panado Effervescent Tablets 16s</h3>
+    <p><strong>R 53.99</strong></p>
+    <button onclick="addToCart('Panado Effervescent Tablets 16s', 53.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 138--->
+<div class="product" data-category="essential foods">
+    <img src="products/grocery/product138.jpg" alt="D'Lite Pure Cooking Oil 2l" class="product-image">
+    <h3>D'Lite Pure Cooking Oil 2l</h3>
+    <p><strong>R 68.99</strong></p>
+    <button onclick="addToCart('D\'Lite Pure Cooking Oil 2l', 68.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 140--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product140.jpg" alt="Voltaren Emulgel 1% 50g" class="product-image">
+    <h3>Voltaren Emulgel 1% 50g</h3>
+    <p><strong>R 149.99</strong></p>
+    <button onclick="addToCart('Voltaren Emulgel 1% 50g', 149.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 141--->
+<div class="product" data-category="bakery">
+    <img src="products/grocery/product141.jpg" alt="Albany Superior Sliced Brown Bread 700g" class="product-image">
+    <h3>Albany Superior Sliced Brown Bread 700g</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Albany Superior Sliced Brown Bread 700g', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 142--->
+<div class="product" data-category="bakery">
+    <img src="products/grocery/product142.jpg" alt="Albany Superior Best of Both White Bread 700g" class="product-image">
+    <h3>Albany Superior Best of Both White Bread 700g</h3>
+    <p><strong>R 23.99</strong></p>
+    <button onclick="addToCart('Albany Superior Best of Both White Bread 700g', 23.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 143--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product143.jpg" alt="Compral Pain Relief Tablets 50 Pack" class="product-image">
+    <h3>Compral Pain Relief Tablets 50 Pack</h3>
+    <p><strong>R 56.99</strong></p>
+    <button onclick="addToCart('Compral Pain Relief Tablets 50 Pack', 56.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 144--->
+<div class="product" data-category="bakery">
+    <img src="products/grocery/product144.jpg" alt="Compral Pain Relief Tablets 50 Pack" class="product-image">
+    <h3>Albany Superior White Bread 700g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Albany Superior White Bread 700g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 145--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product145.jpg" alt="Product" class="product-image">
+    <h3>Top Class Original Spice Mix 350g</h3>
+    <p><strong>R 32.99</strong></p>
+    <button onclick="addToCart('Top Class Original Spice Mix 350g', 32.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 146--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product146.jpg" alt="Product 146" class="product-image">
+    <h3>Bioplus Effervescent Tablets 10s</h3>
+    <p><strong>R 103.99</strong></p>
+    <button onclick="addToCart('Bioplus Effervescent Tablets 10s', 103.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 147--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product147.jpg" alt="Product 147" class="product-image">
+    <h3>Grand-Pa Headache Tablets 24s</h3>
+    <p><strong>R 51.99</strong></p>
+    <button onclick="addToCart('Grandpa Headache Tablets 24s', 51.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 148--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product148.jpg" alt="Product 148" class="product-image">
+    <h3>Borstol Regular Cough Remedy 50ml</h3>
+    <p><strong>R 45.99</strong></p>
+    <button onclick="addToCart('Borstol Regular Cough Remedy 50ml', 45.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 149--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product149.jpg" alt="Product 149" class="product-image">
+    <h3>Cadbury Dairy Milk Bubbly 87g</h3>
+    <p><strong>R 28.99</strong></p>
+    <button onclick="addToCart('Cadbury Dairy Milk Bubbly 87g', 28.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 150--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product150.jpg" alt="Product 150" class="product-image">
+    <h3>Knorr Tasty Minestrone Soup 2in1 50g</h3>
+    <p><strong>R 8.99</strong></p>
+    <button onclick="addToCart('Knorr Tasty Minestrone Soup 2in1 50g', 8.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+
+<!---PRODUCT 151--->
+<div class="product" data-category="bakery">
+    <img src="products/grocery/product151.jpg" alt="Product 151" class="product-image">
+    <h3>Blue Ribbon Classic White Bread 700g</h3>
+    <p><strong>R 19.99</strong></p>
+    <button onclick="addToCart('Blue Ribbon Classic White Bread 700g', 19.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 152--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product152.jpg" alt="Product 152" class="product-image">
+    <h3>Lennon Cough Mixture Honey 100ml</h3>
+    <p><strong>R 69.99</strong></p>
+    <button onclick="addToCart('Lennon Cough Mixture Honey 100ml', 69.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 153--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product153.jpg" alt="Product 153" class="product-image">
+    <h3>Nestle Smarties Milky Bar Slab 80g</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Nestle Smarties Milky Bar Slab 80g', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 154--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product154.jpg" alt="Product 154" class="product-image">
+    <h3>Crown National BBQ Six Gun Grill 200g</h3>
+    <p><strong>R 29.99</strong></p>
+    <button onclick="addToCart('Crown National BBQ Six Gun Grill 200g', 29.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 155--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product155.jpg" alt="Product 155" class="product-image">
+    <h3>Knorr Aromat Original Seasoning Spice 75g</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Knorr Aromat Original Seasoning Spice 75g', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 156--->
+<div class="product" data-category="bakery">
+    <img src="products/grocery/product156.jpg" alt="Product 156" class="product-image">
+    <h3>Sasko Premium Sliced Brown Bread 700g</h3>
+    <p><strong>R 17.99</strong></p>
+    <button onclick="addToCart('Sasko Premium Sliced Brown Bread 700g', 17.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 157--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product157.jpg" alt="Product 157" class="product-image">
+    <h3>Bakers Tennis Classic Coconut Biscuits 200g</h3>
+    <p><strong>R 27.99</strong></p>
+    <button onclick="addToCart('Bakers Tennis Classic Coconut Biscuits 200g', 27.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 158--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product158.jpg" alt="Product 158" class="product-image">
+    <h3>Nestle Aero Peppermint & Smooth Milk Choc 135g</h3>
+    <p><strong>R 48.99</strong></p>
+    <button onclick="addToCart('Nestle Aero Peppermint & Smooth Milk Choc 135g', 48.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 159--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product159.jpg" alt="Product 159" class="product-image">
+    <h3>Knorr Cup-A-Soup Thick & Creamy Chicken & Vegetable Instant Soup 3 x 31g</h3>
+    <p><strong>R 24.99</strong></p>
+    <button onclick="addToCart('Knorr Cup-A-Soup Thick & Creamy Chicken & Vegetable Instant Soup 3 x 31g', 24.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 160--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product160.jpg" alt="Product 160" class="product-image">
+    <h3>Slow Mag Tabs 30s</h3>
+    <p><strong>R 129.99</strong></p>
+    <button onclick="addToCart('Slow Mag Tabs 30s', 129.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 161--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product161.jpg" alt="Product 161" class="product-image">
+    <h3>Simba Peanuts 60g</h3>
+    <p><strong>R 11.99</strong></p>
+    <button onclick="addToCart('Simba Peanuts 60g', 11.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 162--->
+<div class="product" data-category="meat">
+    <img src="products/grocery/product162.jpg" alt="Product" class="product-image">
+    <h3>Goldi Chicken Livers 250g</h3>
+    <p><strong>R 14.99</strong></p>
+    <button onclick="addToCart('Goldi Chicken Livers 250g', 14.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 163--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product163.jpg" alt="Product" class="product-image">
+    <h3>Vicks Lozenges Honey Lemon 24s</h3>
+    <p><strong>R 92.99</strong></p>
+    <button onclick="addToCart('
+Vicks Lozenges Honey Lemon 24s', 92.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 164--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product164.jpg" alt="Product" class="product-image">
+    <h3>Panado Pain & Fever Tablets Blister 12 Pack</h3>
+    <p><strong>R 24.99</strong></p>
+    <button onclick="addToCart('Panado Pain & Fever Tablets Blister 24 Pack', 24.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 165--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product165.jpg" alt="Product" class="product-image">
+    <h3>Borstol Regular Cough Remedy 50ml</h3>
+    <p><strong>R 45.99</strong></p>
+    <button onclick="addToCart('Borstol Regular Cough Remedy 50ml', 45.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 166--->
+<div class="product" data-category="meat">
+    <img src="products/grocery/product166.jpg" alt="Product" class="product-image">
+    <h3>Goldi Chicken Livers 500g</h3>
+    <p><strong>R 27.99</strong></p>
+    <button onclick="addToCart('Goldi Chicken Livers 500g', 27.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 167--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product167.jpg" alt="Product" class="product-image">
+    <h3>Vicks Actaplus Cough Syrup Wet + Dry 50ml</h3>
+    <p><strong>R 49.99</strong></p>
+    <button onclick="addToCart('Vicks Actaplus Cough Syrup Wet + Dry 50ml', 49.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 168--->
+<div class="product" data-category="meat">
+    <img src="products/grocery/product168.jpg" alt="Product" class="product-image">
+    <h3>Skinless Chicken Breast 4 Pack</h3>
+    <p><strong>R 41.99</strong></p>
+    <button onclick="addToCart('Skinless Chicken Breast 4 Pack', 41.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 169--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product169.jpg" alt="Product" class="product-image">
+    <h3>Imana Chicken Stock Cubes 12ea</h3>
+    <p><strong>R 18.99</strong></p>
+    <button onclick="addToCart('Imana Chicken Stock Cubes 12ea', 18.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 170--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product170.jpg" alt="Product" class="product-image">
+    <h3>Willards Big Korn Bite Tomato Chips 50g</h3>
+    <p><strong>R 10.99</strong></p>
+    <button onclick="addToCart('Willards Big Korn Bite Tomato Chips 50g', 10.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 171--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product171.jpg" alt="Product" class="product-image">
+    <h3>Disprin Extra Strength Pain Tablets 24s</h3>
+    <p><strong>R 70.99</strong></p>
+    <button onclick="addToCart('Disprin Extra Strength Pain Tablets 24s', 70.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 172--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product172.jpg" alt="Product" class="product-image">
+    <h3>Benylin Wet Cough Mucus Relief 50ml</h3>
+    <p><strong>R 51.99</strong></p>
+    <button onclick="addToCart('Benylin Wet Cough Mucus Relief 50ml', 51.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 173--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product173.jpg" alt="Product" class="product-image">
+    <h3>Maynards Wine Duo 125g</h3>
+    <p><strong>R 27.99</strong></p>
+    <button onclick="addToCart('Maynards Wine Duo 125g', 27.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 174--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product174.jpg" alt="Product" class="product-image">
+    <h3>Vicks Cough Syrup Honey & Ginger 100ml</h3>
+    <p><strong>R 119.99</strong></p>
+    <button onclick="addToCart('Vicks Cough Syrup Honey & Ginger 100ml', 119.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 175--->
+<div class="product" data-category="meat">
+    <img src="products/grocery/product175.jpg" alt="Product" class="product-image">
+    <h3>Goldi Mix Portions 5kg</h3>
+    <p><strong>R 249.99</strong></p>
+    <button onclick="addToCart('Goldi Mix Portions 5kg', 249.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 176--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product176.jpg" alt="Product" class="product-image">
+    <h3>Imana Chilli Beef Stock Cubes 12 Pack</h3>
+    <p><strong>R 18.99</strong></p>
+    <button onclick="addToCart('Imana Chilli Beef Stock Cubes 12 Pack', 18.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 177--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product177.jpg" alt="Product" class="product-image">
+    <h3>Bioplus Effervescent Tablets 20s</h3>
+    <p><strong>R 219.99</strong></p>
+    <button onclick="addToCart('Bioplus Effervescent Tablets 20s', 219.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 178--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product178.jpg" alt="Product" class="product-image">
+    <h3>Benylin Childrens Wet Cough 50ml</h3>
+    <p><strong>R 51.99</strong></p>
+    <button onclick="addToCart('Benylin Childrens Wet Cough 50ml', 51.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 179--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product179.jpg" alt="Product" class="product-image">
+    <h3>Eno Heartburn & Antacid Tab Orange 24s</h3>
+    <p><strong>R 49.99</strong></p>
+    <button onclick="addToCart('Eno Heartburn & Antacid Tab Orange 24s', 49.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 180--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product180.jpg" alt="Product" class="product-image">
+    <h3>Hinds Mixed Herbs 18g</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Hinds Mixed Herbs 18g', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 181--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product181.jpg" alt="Product" class="product-image">
+    <h3>Eno Active Fruit Salts Orange 200g</h3>
+    <p><strong>R 114.99</strong></p>
+    <button onclick="addToCart('Eno Active Fruit Salts Orange 200g', 114.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 182--->
+<div class="product" data-category="snacks">
+    <img src="products/grocery/product182.jpg" alt="Product" class="product-image">
+    <h3>Maynards Wine Gums Round 400g</h3>
+    <p><strong>R 69.99</strong></p>
+    <button onclick="addToCart('Maynards Wine Gums Round 400g', 69.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 183--->
+<div class="product" data-category="meat">
+    <img src="products/grocery/product183.jpg" alt="Product" class="product-image">
+    <h3>Goldi Cleaned Chicken Feet 1kg</h3>
+    <p><strong>R 35.99</strong></p>
+    <button onclick="addToCart('Goldi Cleaned Chicken Feet 1kg', 35.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 184--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product184.jpg" alt="Product" class="product-image">
+    <h3>Hinds Tumeric 18g</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Hinds Tumeric 18g', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 185--->
+<div class="product" data-category="medication">
+    <img src="products/grocery/product185.jpg" alt="Product" class="product-image">
+    <h3>Compral Pain Relief Tablets 24 Pack</h3>
+    <p><strong>R 33.99</strong></p>
+    <button onclick="addToCart('Compral Pain Relief Tablets 24 Pack', 33.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 186--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product186.jpg" alt="Product" class="product-image">
+    <h3>Imana Chilli Beef Stock Cubes 12 Pack</h3>
+    <p><strong>R 18.99</strong></p>
+    <button onclick="addToCart('Imana Chilli Beef Stock Cubes 12 Pack', 18.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 187--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product187.jpg" alt="Product" class="product-image">
+    <h3>Hinds Steak & Chops Spice 18g</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Hinds Steak & Chops Spice 18g', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 188--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product188.jpg" alt="Product" class="product-image">
+    <h3>Hinds Chip Seasoning 18g</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Hinds Chip Seasoning 18g', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 189--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product189.jpg" alt="Product" class="product-image">
+    <h3>Hinds Spice For Rice 18g</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Hinds Spice For Rice 18g', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 190--->
+<div class="product" data-category="meat">
+    <img src="products/grocery/product190.jpg" alt="Product" class="product-image">
+    <h3>Goldi Mixed Portions 2kg</h3>
+    <p><strong>R 102.99</strong></p>
+    <button onclick="addToCart('Goldi Mixed Portions 2kg', 102.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 191--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product191.jpg" alt="Product" class="product-image">
+    <h3>Robertsons Ground Ginger Baking Spice Refill 50g</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Robertsons Ground Ginger Baking Spice Refill 50g', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 192--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product192.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 193--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product193.jpg" alt="Product" class="product-image">
+    <h3>Hinds Cinnamon 18g</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Hinds Cinnamon 18g', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 194--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product194.jpg" alt="Product" class="product-image">
+    <h3>Hinds Cayenne Pepper 18g</h3>
+    <p><strong>R 15.99</strong></p>
+    <button onclick="addToCart('Hinds Cayenne Pepper 18g', 15.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 195--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product195.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 196--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product196.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 197--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product197.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 198--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product198.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product199.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 200--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product200.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 201--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product201.jpg" alt="Product 201" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 202--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product202.jpg" alt="Product 202" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 203--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product203.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 204--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product204.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 205--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product205.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 206--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product206.jpg" alt="Product" class="product-image">
+    <h3>Robertsons Garlic Flakes Refill 50g</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Robertsons Garlic Flakes Refill 50g', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 207--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product207.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 208--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product208.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 209--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product209.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 210--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product210.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 211--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product211.jpg" alt="Product" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 212--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product212.jpg" alt="Product 212" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 213--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product213.jpg" alt="Product 213" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 214--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product214.jpg" alt="Product 214" class="product-image">
+    <h3>Knorr Cup-A-Soup Lamb & Vegetables 80g</h3>
+    <p><strong>R 23.99</strong></p>
+    <button onclick="addToCart('Knorr Cup-A-Soup Lamb & Vegetables 80g', 23.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 215--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product215.jpg" alt="Product 215" class="product-image">
+    <h3>Knorr Cup-A-Soup Chicken & Mushroom 80g</h3>
+    <p><strong>R 23.99</strong></p>
+    <button onclick="addToCart('Knorr Cup-A-Soup Chicken & Mushroom 80g', 23.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 216--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product216.jpg" alt="Product 216" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 217--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product217.jpg" alt="Product 217" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 218--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product218.jpg" alt="Product" class="product-image">
+    <h3>Robertsons Spice For Rice Refill 50g</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Robertsons Spice For Rice Refill 50g', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 219--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product219.jpg" alt="Product 219" class="product-image">
+    <h3>Knorr Cup-A-Soup Beef & Vegetable 80g</h3>
+    <p><strong>R 23.99</strong></p>
+    <button onclick="addToCart('Knorr Cup-A-Soup Beef & Vegetable 80g', 23.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 220--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product220.jpg" alt="Product 220" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 221--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product221.jpg" alt="Product 221" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 222--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product222.jpg" alt="Product 222" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 223--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product223.jpg" alt="Product 223" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 224--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product224.jpg" alt="Product 224" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 225--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product225.jpg" alt="Product 225" class="product-image">
+    <h3>Knorr Cup-A-Soup Creamy Tomato 80g</h3>
+    <p><strong>R 23.99</strong></p>
+    <button onclick="addToCart('Knorr Cup-A-Soup Creamy Tomato 80g', 23.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 226--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product226.jpg" alt="Product 226" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 227--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product227.jpg" alt="Product 227" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 228--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product228.jpg" alt="Product 228" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 229--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product229.jpg" alt="Product 229" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 230--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product230.jpg" alt="Product 230" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 231--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product231.jpg" alt="Product 231" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 232--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product232.jpg" alt="Product 232" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 233--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product233.jpg" alt="Product" class="product-image">
+    <h3>Robertsons Chicken Spice Refill 50g</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Robertsons Chicken Spice Refill 50g', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 234--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product234.jpg" alt="Product 234" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 235--->
+<div class="product" data-category="category">
+    <img src="products/grocery/product235.jpg" alt="Product 235" class="product-image">
+    <h3>Product Name</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Product Name', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 236--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product236.jpg" alt="Product 236" class="product-image">
+    <h3>Knorr Cup-A-Soup Cream of Chicken 80g</h3>
+    <p><strong>R 23.99</strong></p>
+    <button onclick="addToCart('Knorr Cup-A-Soup Cream of Chicken 80g', 23.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 237--->
+<div class="product" data-category="Soup & Spices">
+    <img src="products/grocery/product237.jpg" alt="Product 237" class="product-image">
+    <h3>Robertsons Steak & Chops</h3>
+    <p><strong>R 21.99</strong></p>
+    <button onclick="addToCart('Robertsons Steak & Chops', 21.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 238--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product238.jpg" alt="Product 238" class="product-image">
+    <h3>Raja Mild & Spicy Curry Powder</h3>
+    <p><strong>R 0.00</strong></p>
+    <button onclick="addToCart('Raja Mild & Spicy Curry Powder', 0.00)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 239--->
+<div class="product" data-category="soup & spices">
+    <img src="products/grocery/product239.jpg" alt="Product 239" class="product-image">
+    <h3>Knorr Cream of Mushroom 50g</h3>
+    <p><strong>R 6.99</strong></p>
+    <button onclick="addToCart('Knorr Cream of Mushroom 50g', 6.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+<!---PRODUCT 240--->
+<div class="product" data-category="meat">
+    <img src="products/grocery/product240.jpg" alt="Product 240" class="product-image">
+    <h3>Butcher Lamb Stew 1kg</h3>
+    <p><strong>R 114.99</strong></p>
+    <button onclick="addToCart('Butcher Lamb Stew 1kg', 114.99)" class="add-to-cart-button">Add to Cart</button>
+</div>
+
+</section>
+
+    </main> 
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+        <button onclick="clearCart()" >Clear Cart</button>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</div>
+
+
+    <script src="assets/js/script.js"></script> 
+    
+    <footer class="footer">
+    <div class="footer-icons">
+        <a href="index.html" class="footer-icon">
+            <img src="assets/img/footericons/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+        
+        <a href="#searchInput" class="footer-icon">
+            <img src="assets/img/footericons/search.png" alt="Search">
+            <span>Search</span>
+        </a>
+
+        <a href="https://wa.me/27726962588" class="footer-icon">
+            <img src="assets/img/footericons/whatsapp.png" alt="Contact">
+            <span>Whatsapp</span>
+        </a>
+        <a href="profile.php" class="footer-icon">
+            <img src="assets/img/footericons/account.png" alt="Contact">
+            <span>Account</span>
+        </a>
+    </div>
+</footer>
+</body>
+</html>

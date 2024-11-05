@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requesteat</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <style>
+        #results { margin-top: 20px; }
+        .product { margin-bottom: 15px; display: flex; align-items: center; }
+        .product img { width: 70px; height: 70px; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    
+<div id="search-container">
+    <input type="text" id="search-input" placeholder="What are you looking for?...">
+    <button onclick="searchProducts()">Find</button>
+    <button id="clear-button" style="display: none;" onclick="clearResults()">Reset</button>
+</div>
+<div id="results"></div>
+
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+		<a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" class="logo"></a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+    <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="grocery.html">Grocery</a></li>
+			<li><a href="liquor.html">Liquor</a></li>
+			<li><a href="restaurant.html">Restaurant</a></li>
+			<li><a href="promotions.html">Promotions</a></li>
+            <li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+            <li><a href="vacancies">Vacancies</a></li>
+        </ul>
+    </nav>
+<body>
+    
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+        <button onclick="clearCart()" class="cart-button clear-button">🗑️ Clear My Cart</button>
+        <button onclick="checkout()" class="cart-button checkout-button">💳 Proceed to Checkout</button>
+    </div>
+</div>
+
+		<div class="container">
+        <div class="shortcut-bar">
+            <a href="grocery.html" class="shortcut-item">
+                <img src="assets/img/shortcuts/1.png" alt="Grocery">
+                <span>Grocery</span>
+            </a>
+			
+			<a href="liquor.html" class="shortcut-item">
+                <img src="assets/img/shortcuts/2.png" alt="Liquor">
+                <span>Liquor</span>
+            </a>
+			
+			<a href="categories/burgers.html" class="shortcut-item">
+                <img src="assets/img/shortcuts/3.png" alt="Burgers">
+                <span>Burgers</span>
+            </a>
+			
+			<a href="categories/pizza.html" class="shortcut-item">
+                <img src="assets/img/shortcuts/4.png" alt="Pizza">
+                <span>Pizza</span>
+            </a>
+			
+			<a href="categories/fruits&veg.html" class="shortcut-item">
+                <img src="assets/img/shortcuts/5.png" alt="Fruits&Veg">
+                <span>Fuits & Veg</span>
+            </a>
+			
+			<a href="categories/tobacco.html" class="shortcut-item">
+                <img src="assets/img/shortcuts/6.png" alt="Tobacco">
+                <span>Tobacco</span>
+            </a>
+	<!-- Add more shortcuts as needed -->
+        </div>
+    </div>
+    
+<Section>
+<div class="uniqueh1">
+    <h2>Quick Access</h2>
+</div>
+
+	<div class="productitem-grid">
+	<!---Our Collection--->
+    <div class="productitem">
+        <img src="products/homepage/Beverage.jpg">
+        <h4>Beverage</h4>
+        <a href="liqour.html" class="cta-button">View</a>
+    </div> 
+        <div class="productitem">
+        <img src="products/homepage/Food.jpg">
+        <h4>Restaurant</h4>
+        <a href="restaurant.html" class="cta-button">View</a>
+    </div>
+        <div class="productitem">
+        <img src="products/homepage/Grocery.jpg">
+        <h4>Grocery</h4>
+        <a href="grocery.html" class="cta-button">View</a>
+    </div> 
+        <div class="productitem">
+        <img src="products/homepage/promotions.jpg">
+        <h4>Promotions</h4>
+        <a href="promotions.html" class="cta-button">View</a>
+    </div> 
+</section>
+
+<div class="uniqueh1">
+    <h2>Best Seller</h2>
+</div>
+
+<section id="items" class="items-grid">
+    <div class="items">
+    <img src="assets/img/quickshop/1.jpg" alt="Product 1" />
+    <h3>Chicken Kota Feast</h3>
+    <p><strong>R 49.99</strong></p>
+	<div class="rating">
+    <span>★★★★☆</span></div>
+    <!---cart button--->
+    <button onclick="addToCart('Chicken Kota Feast', 49.99)" 
+    class="add-to-cart-button">Add to Cart
+    </button></div>
+	   
+	<div class="items">
+    <img src="assets/img/quickshop/2.jpg" alt="Product 2" />
+    <h3>Highway Hunger</h3>
+    <p><strong>R 79.99</strong></p>
+	<div class="rating">
+    <span>★★★☆☆</span></div>
+    <!---cart button--->
+    <button onclick="addToCart('Highway Hunger', 79.99)" 
+	class="add-to-cart-button">Add to Cart</button>
+    </div>
+       </div>
+	   
+	<div class="items">
+    <img src="assets/img/quickshop/9.jpg" alt="Product 9" />
+    <h3>Kasi Grilled Chicken</h3>
+    <p><strong>R 159.99</strong></p>
+	<div class="rating">
+    <span>★★★★★</span></div>
+    <!---cart button--->
+    <button onclick="addToCart('Kasi Grilled Chicken', 159.99)" 
+	class="add-to-cart-button">Add to Cart</button>
+    </div>
+       </div>
+	   
+	<div class="items">
+    <img src="assets/img/quickshop/11.jpg" alt="Product 11" />
+    <h3>Makoya Fish & Chips</h3>
+    <p><strong>R 119.99</strong></p>
+	<div class="rating">
+    <span>★★★★☆</span></div>
+    <!---cart button--->
+    <button onclick="addToCart('Makoya Fish & Chips', 119.99)" 
+	class="add-to-cart-button">Add to Cart</button>
+    </div>
+       </div>
+    
+	<div class="items">
+    <img src="assets/img/quickshop/7.jpg" alt="Product 7" />
+    <h3>Real Grilled Chicken</h3>
+    <p><strong>R 179.99</strong></p>
+	<div class="rating">
+    <span>★★☆☆☆</span></div>
+    <!---cart button--->
+    <button onclick="addToCart('Real Grilled Chicken', 179.99)" 
+	class="add-to-cart-button">Add to Cart</button>
+    </div>
+       </div>
+	   
+	<div class="items">
+    <img src="assets/img/quickshop/6.jpg" alt="Product 6" />
+    <h3>Pap & Mala</h3>
+    <p><strong>R 59.99</strong></p>
+	<div class="rating">
+    <span>★★★★★</span></div>
+    <!---cart button--->
+    <button onclick="addToCart('Pap & Mala', 59.99)" 
+	class="add-to-cart-button">Add to Cart</button>
+    </div>
+       </div>
+	   
+	<div class="items">
+    <img src="assets/img/quickshop/8.jpg" alt="Product 8" />
+    <h3>Pap & Mogodu</h3>
+    <p><strong>R 79.99</strong></p>
+	<div class="rating">
+    <span>★★★★★</span></div>
+    <!---cart button--->
+    <button onclick="addToCart('Pap & Mogodu', 79.99)" 
+	class="add-to-cart-button">Add to Cart</button>
+    </div>
+       </div>
+	   
+	<div class="items">
+    <img src="assets/img/quickshop/12.jpg" alt="Product 12" />
+    <h3>Pap & Beefstew</h3>
+    <p><strong>R 69.99</strong></p>
+	<div class="rating">
+    <span>★★☆☆☆</span></div>
+    <!---cart button--->
+    <button onclick="addToCart('Pap & Beefstew', 69.99)" 
+	class="add-to-cart-button">Add to Cart</button>
+    </div>
+       </div>
+</section>
+
+<section>
+<div class="uniqueh1">
+    <h2>Promotions</h2>
+</div>
+<div class="duration">
+<p class="promotion-duration">Valid Until: <strong>Jan 31, 2024</strong></p>
+</div>
+</section>
+
+<section class="featured-items">
+    <div class="featured-items-container">
+        <div class="item" data-item-id="1">
+            <img src="products/grocery/product025.jpg" alt="Product 1" class="item-image">
+            <h2 class="item-name">Simba Assorted Chips Any 3</h2>
+            <p class="item-price"><s>R66.00</s> <strong>Now: R49.00</strong></p>
+            <button onclick="addToCart('Simba Assorted Chips Any 3', 49.00)" 
+            class="add-to-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="item" data-item-id="2">
+            <img src="products/grocery/product086.jpg" alt="Product 2" class="item-image">
+            <h2 class="item-name">Knorr Soup 50g x 4 Any flavour</h2>
+            <p class="item-price"><s>R28.00</s> <strong>Now: R18.00</strong></p>
+            <button onclick="addToCart('Knorr Soup 50g x 4 Any flavour', 14.99)" 
+            class="add-to-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="item" data-item-id="3">
+            <img src="products/liquorstore/product156.jpg" alt="Product 3" class="item-image">
+            <h2 class="item-name">Heineken Lager 440ml x 6</h2>
+            <p class="item-price"><s>R120.00</s> <strong>Now: R90.00</strong></p>
+            <button onclick="addToCart('Heineken Lager 440ml x 6', 90.00)" 
+            class="add-to-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="item" data-item-id="4">
+            <img src="products/grocery/product151.jpg" alt="Product 4" class="item-image">
+            <h2 class="item-name">Blue Ribbon Classic White Bread</h2>
+            <p class="item-price"><s>R22.00</s> <strong>Now: R17.00</strong></p>
+            <button onclick="addToCart('Blue Ribbon Classic White Bread', 17.00)" 
+            class="add-to-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="item" data-item-id="5">
+            <img src="products/grocery/product066.jpg" alt="Product 5" class="item-image">
+            <h2 class="item-name">Bakers Marie Biscuits Blue Label</h2>
+            <p class="item-price"><s>R20.00</s> <strong>Now: R14.00</strong></p>
+            <button onclick="addToCart('Bakers Marie Biscuits Blue Label', 14.00)" 
+            class="add-to-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="item" data-item-id="6">
+            <img src="products/liquorstore/product027.jpg" alt="Product 6" class="item-image">
+            <h2 class="item-name">Scotish Leader Whisky 750ml Blended</h2>
+            <p class="item-price"><s>R280.00</s> <strong>Now: R250.00</strong></p>
+            <button onclick="addToCart('Scotish Leader Whisky 750ml Blended', 250.00)" 
+            class="add-to-cart-button">Add to Cart</button>
+        </div>
+		
+		<div class="item" data-item-id="6">
+            <img src="products/liquorstore/product089.jpg" alt="Product 7" class="item-image">
+            <h2 class="item-name">Richelieu Brandy 750ml</h2>
+            <p class="item-price"><s>R210.00</s> <strong>Now: R170.00</strong></p>
+            <button onclick="addToCart('Richelieu Brandy 750ml', 170.00)" 
+            class="add-to-cart-button">Add to Cart</button>
+        </div>
+		
+		<div class="item" data-item-id="6">
+            <img src="products/grocery/product232.jpg" alt="Product 8" class="item-image">
+            <h2 class="item-name">Med-Lemon Regular Cold & Flu Remedy 18 Pack</h2>
+            <p class="item-price"><s>R150.00</s> <strong>Now: R110.00</strong></p>
+            <button onclick="addToCart('Med-Lemon Regular Cold & Flu Remedy 18 Pack', 110.00)" 
+            class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<section>
+	<div class="newsletter-container">
+    <div class="newsletter">
+        <h1>Subscribe to Our Newsletter</h1>
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="whatsapp" placeholder="WhatsApp Number" required>
+            <input type="text" id="address" placeholder="Your Address" required>
+            <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+</section>
+
+<section>
+<!-- Social Media Links -->
+    <div class="social-media">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/YourPage" target="_blank">
+            <img src="assets/img/socialicons/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com/YourPage" target="_blank">
+            <img src="assets/img/socialicons/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com/YourPage" target="_blank">
+            <img src="assets/img/socialicons/instagram.png" alt="Instagram">
+        </a>
+    </div>            
+</section>
+
+    <script src="assets/js/script.js"></script> 
+    <footer class="footer">
+    <div class="footer-icons">
+        <a href="index.html" class="footer-icon">
+            <img src="assets/img/footericons/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+        
+        <a href="#search-input" class="footer-icon">
+            <img src="assets/img/footericons/search.png" alt="Search">
+            <span>Search</span>
+        </a>
+
+        <a href="https://wa.me/27726962588" class="footer-icon">
+            <img src="assets/img/footericons/whatsapp.png" alt="Contact">
+            <span>Whatsapp</span>
+        </a>
+        <a href="profile.php" class="footer-icon">
+            <img src="assets/img/footericons/account.png" alt="Contact">
+            <span>Account</span>
+        </a>
+    </div>
+</footer>
+
+    
+</body>
+</html>

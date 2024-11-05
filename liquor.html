@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquor</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+		<a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" class="logo"></a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+    <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="grocery.html">Grocery</a></li>
+			<li><a href="liquor.html">Liquor</a></li>
+			<li><a href="tobacco.html">Tobacco</a></li>
+			<li><a href="promotion.html">On Promotion</a></li>
+            <li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+            <li><a href="vacancies">Vacancies</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        
+        <section class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search liquor..." oninput="filterProducts()">
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="">All Categories</option>
+            <option value="Beer">Beer</option>
+			<option value="Brandy">Brandy</option>
+			<option value="Cocktails">Cocktails</option>
+			<option value="Cider">Cider</option>
+            <option value="CreamLiqueur">Cream & Liqueur</option>
+            <option value="Champagne">Champagne</option>
+			<option value="Gin">Gin</option>
+            <option value="Rum&Tequila">Rum & Tequila</option>
+			<option value="Spritzer">Spritzer</option>
+			<option value="Spiritcooler">Spirit Cooler</option>
+			<option value="Vodka">Vodka</option>
+			<option value="Wine">Wine</option>
+			<option value="Whisky">Whisky</option>
+            <!-- Add more categories as needed -->
+        </select>
+    </section>
+    
+        <section class="product-grid">
+
+		<!---PRODUCT 1--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product001.jpg" alt="Product 1" class="product-image" id="productImage1">
+    <h3>Savanna Premium Angry Lemon 6 x 500ml NRB</h3>
+    <p><strong>R 164.99</strong></p>
+        <!---cart button--->
+        <button onclick="addToCart('Savanna Premium Angry Lemon 6 x 500ml NRB', 164.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 2--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product002.jpg" alt="Product 2" class="product-image" id="productImage2">
+    <h3>Carling Black Label Beer 24 x 500ml CANS</h3>
+    <p><strong>R 319.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Carling Black Label Beer 24 x 500ml CANS', 319.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 3--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product003.jpg" alt="Product 3" class="product-image" id="productImage3">
+    <h3>Hansa Pilsener Beer 24 x 330ml NRB</h3>
+    <p><strong>R 289.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Hansa Pilsener Beer 24 x 330ml NRB', 289.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 4--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product004.jpg" alt="Product 4" class="product-image" id="productImage4">
+    <h3>Carling Black Label Beer 24 x 330ml NRB</h3>
+    <p><strong>R 289.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Carling Black Label Beer 24 x 330ml NRB', 289.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 5--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product005.jpg" alt="Product 5" class="product-image" id="productImage5">
+    <h3>Corona Extra Cerveza 6 x 410ml CANS</h3>
+    <p><strong>R 119.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Corona Extra Cerveza 6 x 410ml CANS', 119.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 6--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product006.jpg" alt="Product 6" class="product-image" id="productImage6">
+    <h3>Corona Extra Cerveza 6 x 335ml NRB</h3>
+    <p><strong>R 109.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Corona Extra Cerveza 6 x 335ml NRB', 109.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 7--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product007.jpg" alt="Product 7" class="product-image" id="productImage7">
+    <h3>Corona Extra Cerveza 12 x 410ml CANS</h3>
+    <p><strong>R 229.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Corona Extra Cerveza 12 x 410ml CANS', 229.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 8--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product008.jpg" alt="Product 8" class="product-image" id="productImage8">
+    <h3>Flying Fish Pressed Lemon Beer 24 x 330ml NRB</h3>
+    <p><strong>R 319.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Flying Fish Pressed Lemon Beer 24 x 330ml NRB', 319.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 9--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product009.jpg" alt="Product 9" class="product-image" id="productImage9">
+    <h3>Hooch Strawberry Spirit Cooler 6 x 275ml NRB</h3>
+    <p><strong>R 94.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Hooch Strawberry Spirit Cooler 6 x 275ml NRB', 94.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 10--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product010.jpg" alt="Product 10" class="product-image" id="productImage10">
+    <h3>Belgium Stella Artois 24 x 410ml CANS</h3>
+    <p><strong>R 359.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Belgium Stella Artois 24 x 410ml CANS', 359.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 11--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product011.jpg" alt="Product 11" class="product-image" id="productImage11">
+    <h3>Brutal Fruit Ruby Apple Spritzer 6 x 500ml CANS</h3>
+    <p><strong>R 119.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Brutal Fruit Ruby Apple Spritzer 6 x 500ml CANS', 119.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 12--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product012.jpg" alt="Product 12" class="product-image" id="productImage12">
+    <h3>Castle Lite Beer 24 x 330ml NRB</h3>
+    <p><strong>R 299.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Castle Lite Beer 24 x 330ml NRB', 299.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+	
+	<!---PRODUCT 13--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product013.jpg" alt="Product 13" class="product-image" id="productImage13">
+    <h3>Brutal Fruit Litchi Spritzer 6 x 500ml CANS</h3>
+    <p><strong>R 119.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Brutal Fruit Litchi Spritzer 6 x 500ml CANS', 119.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 14--->
+	<div class="product" data-category="Vodka">
+    <img src="products/liquorstore/product014.jpg" alt="Product 14" class="product-image" id="productImage14">
+    <h3>Smirnoff 1818 Vodka 1 Litre</h3>
+    <p><strong>R 234.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Smirnoff 1818 Vodka 1 Litre', 234.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 15--->
+	<div class="product" data-category="Brandy">
+    <img src="products/liquorstore/product015.jpg" alt="Product 15" class="product-image" id="productImage15">
+    <h3>KWV Five Brandy 5years 750ml</h3>
+    <p><strong>R 219.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('KWV Five Brandy 5years 750ml', 219.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 16--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product016.jpg" alt="Product 16" class="product-image" id="productImage16">
+    <h3>Natures Own Strawberry Delight 750ml</h3>
+    <p><strong>R 139.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Natures Own Strawberry Delight 750ml', 139.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 17--->
+	<div class="product" data-category="Vodka">
+    <img src="products/liquorstore/product017.jpg" alt="Product 17" class="product-image" id="productImage17">
+    <h3>Premium Russian Bear Vodka 750ml</h3>
+    <p><strong>R 174.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Premium Russian Bear Vodka 750ml', 174.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 18--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product018.jpg" alt="Product 18" class="product-image" id="productImage18">
+    <h3>Namaqua Red Johannisberger 1L</h3>
+    <p><strong>R 49.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Namaqua Red Johannisberger 1L', 49.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 19--->
+	<div class="product" data-category="Rum&Tequila">
+    <img src="products/liquorstore/product019.jpg" alt="Product 19" class="product-image" id="productImage19">
+    <h3>Cape to Rio Pure Cane Spirit 750ml</h3>
+    <p><strong>R 184.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Cape to Rio Pure Cane Spirit 750ml', 184.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 20--->
+	<div class="product" data-category="Rum&Tequila">
+    <img src="products/liquorstore/product020.jpg" alt="Product 20" class="product-image" id="productImage20">
+    <h3>Malibu Original White Rum 750ml</h3>
+    <p><strong>R 199.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Malibu Original White Rum 750ml', 199.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 21--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product021.jpg" alt="Product 21" class="product-image" id="productImage21">
+    <h3>Four Cousins Smooth Dry Red 3L</h3>
+    <p><strong>R 149.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Four Cousins Smooth Dry Red 3L', 149.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 22--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product022.jpg" alt="Product 22" class="product-image" id="productImage22">
+    <h3>Strongbow Gold Apple Bottle 24 x 330ml</h3>
+    <p><strong>R 339.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Strongbow Gold Apple Bottle 24 x 330ml', 339.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 23--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product023.jpg" alt="Product 23" class="product-image" id="productImage23">
+    <h3>Smirnoff Storm Pine Twist NRB 6 x 300ml</h3>
+    <p><strong>R 109.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Smirnoff Storm Pine Twist NRB 6 x 300ml', 109.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 24--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product024.jpg" alt="Product 24" class="product-image" id="productImage24">
+    <h3>Smirnoff Spin Spirit Cooler 24 x 300ml</h3>
+    <p><strong>R 399.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Smirnoff Spin Spirit Cooler 24 x 300ml', 399.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 25--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product025.jpg" alt="Product 25" class="product-image" id="productImage25">
+    <h3>Drosdty Hof Adelpracht Late Harvest 1L</h3>
+    <p><strong>R 49.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Drosdty Hof Adelpracht Late Harvest 1L', 49.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 26--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product026.jpg" alt="Product 26" class="product-image" id="productImage26">
+    <h3>Glenbrynth Blended Whisky 750ml</h3>
+    <p><strong>R 229.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Glenbrynth Blended Whisky 750ml', 229.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 27--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product027.jpg" alt="Product 27" class="product-image" id="productImage27">
+    <h3>Scotish Leader Original Whisky 750ml</h3>
+    <p><strong>R 279.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Scotish Leader Original Whisky 750ml', 279.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 28--->
+	<div class="product" data-category="Vodka">
+    <img src="products/liquorstore/product028.jpg" alt="Product 28" class="product-image" id="productImage28">
+    <h3>Absolut Vodka 750ml</h3>
+    <p><strong>R 289.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Absolut Vodka 750ml', 289.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 29--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product029.jpg" alt="Product 29" class="product-image" id="productImage29">
+    <h3>Savanna Premium Dry 6 x 500ml NRB</h3>
+    <p><strong>R 164.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Savanna Premium Dry 6 x 500ml NRB', 164.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 30--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product030.jpg" alt="Product 30" class="product-image" id="productImage30">
+    <h3>4th Street Sweet Rose Wine 3L</h3>
+    <p><strong>R 149.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('4th Street Sweet Rose Wine 3L', 149.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 31--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product031.jpg" alt="Product 31" class="product-image" id="productImage31">
+    <h3>Drosdty Hof Adelpracht Late Harvest 3L</h3>
+    <p><strong>R 159.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Drosdty Hof Adelpracht Late Harvest 3L', 159.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 32--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product032.jpg" alt="Product 32" class="product-image" id="productImage32">
+    <h3>4th Street Sweet Rose Wine 5L</h3>
+    <p><strong>R 199.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('4th Street Sweet Rose Wine 5L', 199.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 33--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product033.jpg" alt="Product 33" class="product-image" id="productImage33">
+    <h3>Threeships Select 3years Premium 750ml</h3>
+    <p><strong>R 199.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Threeships Select 3years Premium 750ml', 199.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 34--->
+	<div class="product" data-category="Brandy">
+    <img src="products/liquorstore/product034.jpg" alt="Product 34" class="product-image" id="productImage34">
+    <h3>Olof Bergh Brandewyn Solera 750ml</h3>
+    <p><strong>R 189.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Olof Bergh Brandewyn Solera 750ml', 189.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 35--->
+	<div class="product" data-category="Vodka">
+    <img src="products/liquorstore/product035.jpg" alt="Product 35" class="product-image" id="productImage35">
+    <h3>Count Pushkin Vodka 750ml</h3>
+    <p><strong>R 174.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Count Pushkin Vodka 750ml', 174.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 36--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product036.jpg" alt="Product 36" class="product-image" id="productImage36">
+    <h3>Amarula Cream Liqueur 750ml</h3>
+    <p><strong>R 179.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Amarula Cream Liqueur 750ml', 179.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 37--->
+	<div class="product" data-category="Brandy">
+    <img src="products/liquorstore/product037.jpg" alt="Product 1" class="product-image" id="productImage37">
+    <h3>Klipdrift Smooth Brandy 750ml</h3>
+    <p><strong>R 199.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Klipdrift Smooth Brandy 750ml', 199.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 38--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product038.jpg" alt="Product 38" class="product-image" id="productImage38">
+    <h3>Klipdrift & Cola Spirit Cooler 24 x 275ml</h3>
+    <p><strong>R 399.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Klipdrift & Cola Spirit Cooler 24 x 275ml', 399.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 39--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product039.jpg" alt="Product 39" class="product-image" id="productImage39">
+    <h3>Drosdty Hof Smooth Claret Medium Dry Red 3L</h3>
+    <p><strong>R 159.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Drosdty Hof Smooth Claret Medium Dry Red 3L', 159.99)" 
+		class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 40--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product040.jpg" alt="Product 40" class="product-image" id="productImage40">
+    <h3>Drosdty Hof Light Dry White 5L</h3>
+    <p><strong>R 209.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Drosdty Hof Light Dry White 5L', 209.99)" 
+		class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 41--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product041.jpg" alt="Product 41" class="product-image" id="productImage41">
+    <h3>Namaqua White Johannisberger 1L</h3>
+    <p><strong>R 49.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Namaqua White Johannisberger 1L', 49.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 42--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product042.jpg" alt="Product 42" class="product-image" id="productImage42">
+    <h3>Namaqua Sweet Red Wine 5L</h3>
+    <p><strong>R 184.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Namaqua Sweet Red Wine 5L', 184.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 43--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product043.jpg" alt="Product 43" class="product-image" id="productImage43">
+    <h3>Namaqua Sweet Rose Wine 5L</h3>
+    <p><strong>R 184.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Namaqua Sweet Rose Wine 5L', 184.99)"
+		class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 44--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product044.jpg" alt="Product 44" class="product-image" id="productImage44">
+    <h3>Namaqua White Johannisberger 5L</h3>
+    <p><strong>R 289.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Namaqua White Johannisberger 5L', 289.99)" 
+		class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 45--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product045.jpg" alt="Product 45" class="product-image" id="productImage45">
+    <h3>4th Street Sweet Late Harvest 3L</h3>
+    <p><strong>R 139.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('4th Street Sweet Late Harvest 3L', 139.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 46--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product046.jpg" alt="Product 46" class="product-image" id="productImage46">
+    <h3>Clubman Mint Punch Aperitif 750ml</h3>
+    <p><strong>R 85.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Clubman Mint Punch Aperitif 750ml', 85.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 47--->
+	<div class="product" data-category="Vodka">
+    <img src="products/liquorstore/product047.jpg" alt="Product 47" class="product-image" id="productImage47">
+    <h3>CRUZ Vintage Black Vodka 750ml</h3>
+    <p><strong>R 289.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('CRUZ Vintage Black Vodka 750ml', 289.99)" 
+		class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 48--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product048.jpg" alt="Product 48" class="product-image" id="productImage48">
+    <h3>The Famous Grouse Whisky 750ml</h3>
+    <p><strong>R 279.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('The Famous Grouse Whisky 750ml', 279.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 49--->
+	<div class="product" data-category="Rum&Tequila">
+    <img src="products/liquorstore/product049.jpg" alt="Product 49" class="product-image" id="productImage49">
+    <h3>Olmeca Tequila Reposado 750ml</h3>
+    <p><strong>R 319.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Olmeca Tequila Reposado 750ml', 319.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 50--->
+	<div class="product" data-category="Rum&Tequila">
+    <img src="products/liquorstore/product050.jpg" alt="Product 50" class="product-image" id="productImage50">
+    <h3>Olmeca Tequila Silver 750ml</h3>
+    <p><strong>R 319.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Olmeca Tequila Silver 750ml', 319.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 51--->
+	<div class="product" data-category="Rum&Tequila">
+    <img src="products/liquorstore/product051.jpg" alt="Product 51" class="product-image" id="productImage51">
+    <h3>Barcadi Carta Blanca 750ml</h3>
+    <p><strong>R 279.99</strong></p>
+    <div class="image-navigation">
+        <!---cart button--->
+        <button onclick="addToCart('Barcadi Carta Blanca 750ml', 279.99)" class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+	<!---PRODUCT 52--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product052.jpg" alt="Product 52" class="product-image" id="productImage52">
+    <h3>Black & White Whisky Scotch 750ml</h3>
+    <p><strong>R 219.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Black & White Whisky Scotch 750ml', 219.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 53--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product053.jpg" alt="Product 53" class="product-image" id="productImage53">
+    <h3>Bell's Blended Scotch Whisky 750ml</h3>
+    <p><strong>R 279.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Bell's Blended Scotch Whisky 750ml', 279.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 54--->
+	<div class="product" data-category="Rum&Tequila">
+    <img src="products/liquorstore/product054.jpg" alt="Product 54" class="product-image" id="productImage54">
+    <h3>Captain Morgan Spiced Gold 750ml</h3>
+    <p><strong>R 199.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Captain Morgan Spiced Gold 750ml', 199.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 55--->
+	<div class="product" data-category="Brandy">
+    <img src="products/liquorstore/product055.jpg" alt="Product 55" class="product-image" id="productImage55">
+    <h3>Commando Cask Matured Brandy 750ml</h3>
+    <p><strong>R 199.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Commando Cask Matured Brandy 750ml', 199.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 56--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product056.jpg" alt="Product 56" class="product-image" id="productImage56">
+    <h3>Firstwatch Imported Whisky 750ml</h3>
+    <p><strong>R 194.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Firstwatch Imported Whisky 750ml', 194.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 57--->
+	<div class="product" data-category="Brandy">
+    <img src="products/liquorstore/product057.jpg" alt="Product 57" class="product-image" id="productImage57">
+    <h3>Fish Eagle Potstil Brandy 750ml</h3>
+    <p><strong>R 219.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Fish Eagle Potstil Brandy 750ml', 219.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 58--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product058.jpg" alt="Product 58" class="product-image" id="productImage58">
+    <h3>Grant's Triple Wood Whisky 750ml</h3>
+    <p><strong>R 279.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Grants Triple Wood Whisky 750ml', 279.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 59--->
+	<div class="product" data-category="Gin">
+    <img src="products/liquorstore/product059.jpg" alt="Product 59" class="product-image" id="productImage59">
+    <h3>Gordons London Dry Gin 750ml</h3>
+    <p><strong>R 189.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Gordons London Dry Gin 750ml', 189.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 60--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product060.jpg" alt="Product 60" class="product-image" id="productImage60">
+    <h3>J&B Blended Whisky Scotch 750ml</h3>
+    <p><strong>R 259.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('J&B Blended Whisky Scotch 750ml', 259.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 61--->
+	<div class="product" data-category="Cocktails">
+    <img src="products/liquorstore/product061.jpg" alt="Product 61" class="product-image" id="productImage61">
+    <h3>Original Iced Pina Colada 300ml</h3>
+    <p><strong>R 34.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Original Iced Pina Colada 300ml', 34.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 62--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product062.jpg" alt="Product 62" class="product-image" id="productImage62">
+    <h3>Zorba Liqueur Greek 750ml</h3>
+    <p><strong>R 85.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Zorba Liqueur Greek 750ml', 85.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 63--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product063.jpg" alt="Product 63" class="product-image" id="productImage63">
+    <h3>VAT 69 Blended Scotch Whisky 750ml</h3>
+    <p><strong>R 199.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('VAT 69 Blended Scotch Whisky 750ml', 199.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 64--->
+	<div class="product" data-category="Gin">
+    <img src="products/liquorstore/product064.jpg" alt="Product 64" class="product-image" id="productImage64">
+    <h3>Bombay London Dry Gin 750ml</h3>
+    <p><strong>R 299.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Bombay London Dry Gin 750ml', 299.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 65--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product065.jpg" alt="Product 65" class="product-image" id="productImage65">
+    <h3>Namaqua Sweet Rose Wine 1L</h3>
+    <p><strong>R 49.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Namaqua Sweet Rose Wine 1L', 49.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 66--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product066.jpg" alt="Product 66" class="product-image" id="productImage66">
+    <h3>Namaqua Sweet Red Wine 1L</h3>
+    <p><strong>R 49.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Namaqua Sweet Red Wine 1L', 49.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 67--->
+	<div class="product" data-category="Gin">
+    <img src="products/liquorstore/product067.jpg" alt="Product 67" class="product-image" id="productImage67">
+    <h3>Tanqueray London Dry Gin 750ml</h3>
+    <p><strong>R 349.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Tanqueray London Dry Gin 750ml', 349.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 68--->
+	<div class="product" data-category="Brandy">
+    <img src="products/liquorstore/product068.jpg" alt="Product 68" class="product-image" id="productImage68">
+    <h3>KWV Ten Brandy 10years 750ml</h3>
+    <p><strong>R 399.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('KWV Ten Brandy 10years 750ml', 399.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 69--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product069.jpg" alt="Product 69" class="product-image" id="productImage69">
+    <h3>4th Street Sweet Late Harvest 5L</h3>
+    <p><strong>R 199.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('4th Street Sweet Late Harvest 5L', 199.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 70--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product070.jpg" alt="Product 70" class="product-image" id="productImage70">
+    <h3>Savanna Premium Dry 24 x 330ml NRB</h3>
+    <p><strong>R 439.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Savanna Premium Dry 24 x 330ml NRB', 439.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 71--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product071.jpg" alt="Product 71" class="product-image" id="productImage71">
+    <h3>Savanna Premium Dry 6 x 330ml NRB</h3>
+    <p><strong>R 119.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Savanna Premium Dry 6 x 330ml NRB', 119.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 72--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product072.jpg" alt="Product 72" class="product-image" id="productImage72">
+    <h3>Strawberry Lips Cream Liqueur 750ml</h3>
+    <p><strong>R 159.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Strawberry Lips Cream Liqueur 750ml', 159.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 73--->
+	<div class="product" data-category="Gin">
+    <img src="products/liquorstore/product073.jpg" alt="Product 73" class="product-image" id="productImage73">
+    <h3>Stretton's London Dry Gin 750ml</h3>
+    <p><strong>R 189.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Stretton's London Dry Gin 750ml', 189.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 74--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product074.jpg" alt="Product 74" class="product-image" id="productImage74">
+    <h3>Harrier Blended Scotch 750ml</h3>
+    <p><strong>R 189.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Harrier Blended Scotch 750ml', 189.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 75--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product075.jpg" alt="Product 75" class="product-image" id="productImage75">
+    <h3>Namaqua Sweet Rose Wine 3L</h3>
+    <p><strong>R 144.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Namaqua Sweet Rose Wine 3L', 144.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 76--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product076.jpg" alt="Product 76" class="product-image" id="productImage76">
+    <h3>Wild Africa Cream Liqueur 750ml</h3>
+    <p><strong>R 149.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Wild Africa Cream Liqueur 750ml', 149.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 77--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product077.jpg" alt="Product 77" class="product-image" id="productImage77">
+    <h3>Pearly Bay Sweet Rose 3L</h3>
+    <p><strong>R 139.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Pearly Bay Sweet Rose 3L', 139.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 78--->
+	<div class="product" data-category="Brandy">
+    <img src="products/liquorstore/product078.jpg" alt="Product 78" class="product-image" id="productImage78">
+    <h3>Wellington VO Brandy 750ml</h3>
+    <p><strong>R 184.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Wellington VO Brandy 750ml', 184.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 79--->
+	<div class="product" data-category="Vodka">
+    <img src="products/liquorstore/product079.jpg" alt="Product 79" class="product-image" id="productImage79">
+    <h3>Smirnoff 1818 Vodka 750ml</h3>
+    <p><strong>R 174.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Smirnoff 1818 Vodka 750ml', 174.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 80--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product080.jpg" alt="Product 80" class="product-image" id="productImage80">
+    <h3>Jim Beam Bourbon Whiskey</h3>
+    <p><strong>R 309.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Jim Beam Bourbon Whiskey', 309.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 81--->
+	<div class="product" data-category="Gin">
+    <img src="products/liquorstore/product081.jpg" alt="Product 81" class="product-image" id="productImage81">
+    <h3>Belgravia London Dry Gin 750ml</h3>
+    <p><strong>R 179.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Namaqua Sweet Rose Wine 1L', 179.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 82--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product082.jpg" alt="Product 82" class="product-image" id="productImage82">
+    <h3>Rain Dance Johannisberger 5L</h3>
+    <p><strong>R 164.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Rain Dance Johannisberger 5L', 164.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 83--->
+	<div class="product" data-category="Gin">
+    <img src="products/liquorstore/product083.jpg" alt="Product 83" class="product-image" id="productImage83">
+    <h3>Old Buck Dry Gin 750ml</h3>
+    <p><strong>R 174.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Old Buck Dry Gin 750ml', 174.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 84--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product084.jpg" alt="Product 84" class="product-image" id="productImage84">
+    <h3>Three Ships Select 5years Premium 750ml</h3>
+    <p><strong>R 229.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Three Ships Select 5years Premium 750ml', 229.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 85--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product085.jpg" alt="Product 85" class="product-image" id="productImage85">
+    <h3>4th Street Sweet White 5L</h3>
+    <p><strong>R 199.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('4th Street Sweet White 5L', 199.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 86--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product086.jpg" alt="Product 86" class="product-image" id="productImage86">
+    <h3>4th Street Sweet Red 5L</h3>
+    <p><strong>R 199.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('4th Street Sweet Red 5L', 199.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 87--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product087.jpg" alt="Product 87" class="product-image" id="productImage87">
+    <h3>Amarula Cream Liqueur 1L</h3>
+    <p><strong>R 224.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Amarula Cream Liqueur 1L', 224.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 88--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product088.jpg" alt="Product 88" class="product-image" id="productImage88">
+    <h3>4th Street Sweet White 3L</h3>
+    <p><strong>R 149.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('4th Street Sweet White 3L', 149.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 89--->
+	<div class="product" data-category="Brandy">
+    <img src="products/liquorstore/product089.jpg" alt="Product 89" class="product-image" id="productImage89">
+    <h3>Richelieu International Brandy 750ml</h3>
+    <p><strong>R 219.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Richelieu International Brandy 750ml', 219.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 90--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product090.jpg" alt="Product 90" class="product-image" id="productImage90">
+    <h3>4th Street Sweet Red 3L</h3>
+    <p><strong>R 149.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('4th Street Sweet Red 3L', 149.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 91--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product091.jpg" alt="Product 91" class="product-image" id="productImage91">
+    <h3>Amarula Strawberry Chocolate 750ml</h3>
+    <p><strong>R 179.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Amarula Strawberry Chocolate 750ml', 179.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 92--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product092.jpg" alt="Product 92" class="product-image" id="productImage92">
+    <h3>Brutal Fruit Litchi Seche Can 6 x 500ml</h3>
+    <p><strong>R 119.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Brutal Fruit Litchi Seche Can 6 x 500ml', 119.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 93--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product093.jpg" alt="Product 93" class="product-image" id="productImage93">
+    <h3>Brutal Fruit Litchi Seche Can 24 x 500ml</h3>
+    <p><strong>R 449.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Brutal Fruit Litchi Seche Can 6 x 500ml', 449.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 94--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product094.jpg" alt="Product 94" class="product-image" id="productImage94">
+    <h3>Brutal Fruit Ruby Apple NRB 12 x 620ml</h3>
+    <p><strong>R 279.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Brutal Fruit Ruby Apple NRB 12 x 620ml', 279.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 95--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product095.jpg" alt="Product 95" class="product-image" id="productImage95">
+    <h3>Brutal Fruit Ruby Apple Spritzer 6 x 275ml</h3>
+    <p><strong>R 89.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Brutal Fruit Ruby Apple Spritzer 6 x 275ml', 89.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 96--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product096.jpg" alt="Product 96" class="product-image" id="productImage96">
+    <h3>Brutal Fruit Ruby Apple Spritzer 24 x 275ml</h3>
+    <p><strong>R 324.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Brutal Fruit Ruby Apple Spritzer 24 x 275ml', 324.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 97--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product097.jpg" alt="Product 97" class="product-image" id="productImage97">
+    <h3>Brutal Fruit Ruby Apple Spritzer 24 x 500ml</h3>
+    <p><strong>R 449.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Brutal Fruit Ruby Apple Spritzer 24 x 500ml', 449.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 98--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product098.jpg" alt="Product 98" class="product-image" id="productImage98">
+    <h3>Brutal Fruit Strawberry Rouge 6 x 275ml</h3>
+    <p><strong>R 89.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Brutal Fruit Strawberry Rouge 6 x 275ml', 89.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 99--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product099.jpg" alt="Product 99" class="product-image" id="productImage99">
+    <h3>Brutal Fruit Strawberry Rouge 24 x 275ml</h3>
+    <p><strong>R 324.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Brutal Fruit Strawberry Rouge 24 x 275ml', 324.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 100--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product100.jpg" alt="Product 100" class="product-image" id="productImage100">
+    <h3>Hooch Apple 24 x 275ml</h3>
+    <p><strong>R 349.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hooch Apple 24 x 275ml', 349.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 102--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product102.jpg" alt="Product 102" class="product-image" id="productImage102">
+    <h3>Savanna Premium Angry Lemon 12 x 500ml NRB</h3>
+    <p><strong>R 309.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Savanna Premium Angry Lemon 12 x 500ml NRB', 309.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 103--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product103.jpg" alt="Product 103" class="product-image" id="productImage103">
+    <h3>Savanna Premium Angry Lemon 6 x 330ml NRB</h3>
+    <p><strong>R 119.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Savanna Premium Angry Lemon 6 x 330ml NRB', 119.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 104--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product104.jpg" alt="Product 104" class="product-image" id="productImage104">
+    <h3>Savanna Premium Angry Lemon 24 x 330ml NRB</h3>
+    <p><strong>R 449.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Savanna Premium Angry Lemon 24 x 330ml NRB', 449.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 105--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product105.jpg" alt="Product 105" class="product-image" id="productImage105">
+    <h3>Heineken Premium Lager 24 x 330ml NRB</h3>
+    <p><strong>R 369.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Heineken Premium Lager 24 x 330ml NRB', 369.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 107--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product107.jpg" alt="Product 107" class="product-image" id="productImage107">
+    <h3>Savanna Premium Dry 6 x 330ml NRB</h3>
+    <p><strong>R 119.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Savanna Premium Dry 6 x 330ml NRB', 119.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 109--->
+	<div class="product" data-category="Cocktails">
+    <img src="products/liquorstore/product109.jpg" alt="Product 109" class="product-image" id="productImage109">
+    <h3>CIAO Vodcano Spirit Cooler Cocktail 2L</h3>
+    <p><strong>R 139.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('CIAO Vodcano Spirit Cooler Cocktail 2L', 139.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 110--->
+	<div class="product" data-category="Cocktails">
+    <img src="products/liquorstore/product110.jpg" alt="Product 110" class="product-image" id="productImage110">
+    <h3>CIAO Cosmo Spirit Cooler Cocktail 2L</h3>
+    <p><strong>R 139.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('CIAO Cosmo Spirit Cooler Cocktail 2L', 139.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 111--->
+	<div class="product" data-category="Cocktails">
+    <img src="products/liquorstore/product111.jpg" alt="Product 111" class="product-image" id="productImage111">
+    <h3>CIAO Paradise Bliss Spirit Cooler Cocktail 2L</h3>
+    <p><strong>R 139.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('CIAO Paradise Bliss Spirit Cooler Cocktail 2L', 139.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 112--->
+	<div class="product" data-category="Cocktails">
+    <img src="products/liquorstore/product112.jpg" alt="Product 112" class="product-image" id="productImage112">
+    <h3>CIAO Gin & Mango Spirit Cooler Cocktail 2L</h3>
+    <p><strong>R 139.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('CIAO Gin & Mango Spirit Cooler Cocktail 2L', 139.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 113--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product113.jpg" alt="Product 113" class="product-image" id="productImage113">
+    <h3>Rain Dance Smooth Dry Red 3L</h3>
+    <p><strong>R 129.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Rain Dance Smooth Dry Red 3L', 129.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 114--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product114.jpg" alt="Product 114" class="product-image" id="productImage114">
+    <h3>Rain Dance Johanessbeger 3L</h3>
+    <p><strong>R 129.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Rain Dance Johanessbeger 3L', 129.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 115--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product115.jpg" alt="Product 115" class="product-image" id="productImage115">
+    <h3>Rain Dance Natural Sweet Rose 3L</h3>
+    <p><strong>R 129.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Rain Dance Natural Sweet Rose 3L', 129.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 116--->
+	<div class="product" data-category="Rum&Tequila">
+    <img src="products/liquorstore/product116.jpg" alt="Product 116" class="product-image" id="productImage116">
+    <h3>Red Heart Original 750ml</h3>
+    <p><strong>R 229.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Red Heart Original 750ml', 229.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 117--->
+	<div class="product" data-category="Gin">
+    <img src="products/liquorstore/product117.jpg" alt="Product 117" class="product-image" id="productImage117">
+    <h3>IMAGIN Classic Gin 750ml</h3>
+    <p><strong>R 169.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('IMAGIN Classic Gin 750ml', 169.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 118--->
+	<div class="product" data-category="Vodka">
+    <img src="products/liquorstore/product118.jpg" alt="Product 118" class="product-image" id="productImage118">
+    <h3>Skyy Vodka Original 750ml</h3>
+    <p><strong>R 279.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Skyy Vodka Original 750ml', 279.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 119--->
+	<div class="product" data-category="Brandy">
+    <img src="products/liquorstore/product119.jpg" alt="Product 119" class="product-image" id="productImage119">
+    <h3>KWV Three Brandy 3years 750ml</h3>
+    <p><strong>R 199.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('KWV Three Brandy 3years 750ml', 199.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 120--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product120.jpg" alt="Product 120" class="product-image" id="productImage120">
+    <h3>Strawberry Blonde Cream Liqueur 750ml</h3>
+    <p><strong>R 134.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Strawberry Blonde Cream Liqueur 750ml', 134.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 122--->
+	<div class="product" data-category="Rum&Tequila">
+    <img src="products/liquorstore/product122.jpg" alt="Product 122" class="product-image" id="productImage122">
+    <h3>Black Rabbit Rum 750ml</h3>
+    <p><strong>R 229.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Black Rabbit Rum 750ml', 229.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 123--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product123.jpg" alt="Product 123" class="product-image" id="productImage123">
+    <h3>Black Knight Single Malt Whisky 750ml</h3>
+    <p><strong>R 379.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Black Knight Single Malt Whisky 750ml', 379.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 124--->
+	<div class="product" data-category="Rum&Tequila">
+    <img src="products/liquorstore/product124.jpg" alt="Product 124" class="product-image" id="productImage124">
+    <h3>Cactus Jack Original Tequila 750ml</h3>
+    <p><strong>R 159.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Cactus Jack Original Tequila 750m', 159.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 125--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product125.jpg" alt="Product 125" class="product-image" id="productImage125">
+    <h3>Wild Africa Cream Chocolate Liqueur 750ml</h3>
+    <p><strong>R 149.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Wild Africa Cream Chocolate Liqueur 750ml', 149.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 126--->
+	<div class="product" data-category="Cocktails">
+    <img src="products/liquorstore/product126.jpg" alt="Product 126" class="product-image" id="productImage126">
+    <h3>Original Strawberry Daquiri 300ml</h3>
+    <p><strong>R 34.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Original Strawberry Daquiri 300ml', 34.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 127--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product127.jpg" alt="Product 127" class="product-image" id="productImage127">
+    <h3>Extreme Apple Ale 24 x 440ml CANS</h3>
+    <p><strong>R 599.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Extreme Apple Ale 24 x 440ml CANS', 599.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 128--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product128.jpg" alt="Product 119" class="product-image" id="productImage119">
+    <h3>Extreme Apple Ale 24 x 300ml CANS</h3>
+    <p><strong>R 419.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Extreme Apple Ale 24 x 300ml CANS', 419.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 129--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product129.jpg" alt="Product 129" class="product-image" id="productImage129">
+    <h3>Bernini Blush Spritzer 24 x 275ml NRB</h3>
+    <p><strong>R 349.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Bernini Blush Spritzer 24 x 275ml NRB', 349.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+
+<!---PRODUCT 130--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product130.jpg" alt="Product 130" class="product-image" id="productImage130">
+    <h3>Bernini Blush Spritzer 12 x 500ml CANS</h3>
+    <p><strong>R 214.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Bernini Blush Spritzer 12 x 500ml CANS', 214.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 131--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product131.jpg" alt="Product 131" class="product-image" id="productImage131">
+    <h3>Bernini Classic Spritzer 12 x 500ml CANS</h3>
+    <p><strong>R 214.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Bernini Classic Spritzer 12 x 500ml CANS', 214.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 132--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product132.jpg" alt="Product 132" class="product-image" id="productImage132">
+    <h3>Bernini Blush Spritzer 6 x 500ml CANS</h3>
+    <p><strong>R 119.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Bernini Blush Spritzer 6 x 500ml CANS', 119.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 133--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product133.jpg" alt="Product 133" class="product-image" id="productImage133">
+    <h3>Bernini Amber Spritzer 24 x 275ml NRB</h3>
+    <p><strong>R 349.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Bernini Amber Spritzer 24 x 275ml NRB', 349.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 134--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product134.jpg" alt="Product 134" class="product-image" id="productImage134">
+    <h3>Bernini Classic Spritzer 24 x 275ml NRB</h3>
+    <p><strong>R 349.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Bernini Classic Spritzer 24 x 275ml NRB', 349.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 135--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product135.jpg" alt="Product 135" class="product-image" id="productImage135">
+    <h3>Windhoek Lager 24 x 440ml NRB</h3>
+    <p><strong>R 409.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Windhoek Lager 24 x 440ml NRB', 409.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 136--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product136.jpg" alt="Product 136" class="product-image" id="productImage136">
+    <h3>Windhoek Lager 6 x 440ml NRB</h3>
+    <p><strong>R 114.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Windhoek Lager 6 x 440ml NRB', 114.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 137--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product137.jpg" alt="Product 137" class="product-image" id="productImage137">
+    <h3>Windhoek Lager 6 x 440ml CANS</h3>
+    <p><strong>R 114.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Windhoek Lager 6 x 440ml CANS', 114.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 138--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product138.jpg" alt="Product 138" class="product-image" id="productImage138">
+    <h3>Heineken Silver 6 x 330ml NRB</h3>
+    <p><strong>R 104.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Heineken Silver 6 x 330ml NRB', 104.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 139--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product139.jpg" alt="Product 139" class="product-image" id="productImage139">
+    <h3>SOL Cerveza Mexican 6 x 330ml NRB</h3>
+    <p><strong>R 89.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('SOL Cerveza Mexican 6 x 330ml NRB', 89.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 140--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product140.jpg" alt="Product 140" class="product-image" id="productImage140">
+    <h3>Amstel Lager 6 x 330ml NRB</h3>
+    <p><strong>R 94.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Amstel Lager 6 x 330ml NRB', 94.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 141--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product141.jpg" alt="Product 141" class="product-image" id="productImage141">
+    <h3>Hunters Export 24 x 330ml NRB</h3>
+    <p><strong>R 349.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Export 24 x 330ml NRB', 349.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 142--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product142.jpg" alt="Product 142" class="product-image" id="productImage142">
+    <h3>Hunters Export 6 x 330ml NRB</h3>
+    <p><strong>R 99.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Export 6 x 330ml NRB', 99.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 143--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product143.jpg" alt="Product 143" class="product-image" id="productImage143">
+    <h3>Hunters Dry 6 x 330ml NRB</h3>
+    <p><strong>R 99.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Dry 6 x 330ml NRB', 99.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 144--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product144.jpg" alt="Product 144" class="product-image" id="productImage144">
+    <h3>Hunters Hard Lemon 24 x 330ml NRB</h3>
+    <p><strong>R 349.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Hard Lemon 24 x 330ml NRB', 349.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 145--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product145.jpg" alt="Product 145" class="product-image" id="productImage145">
+    <h3>Hunters Gold 24 x 330ml NRB</h3>
+    <p><strong>R 349.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Gold 24 x 330ml NRB', 349.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 146--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product146.jpg" alt="Product 146" class="product-image" id="productImage146">
+    <h3>Hunters Dry 24 x 330ml NRB</h3>
+    <p><strong>R 349.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Dry 24 x 330ml NRB', 349.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 147--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product147.jpg" alt="Product 147" class="product-image" id="productImage147">
+    <h3>Hunters Hard Lemon 6 x 330ml NRB</h3>
+    <p><strong>R 99.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Hard Lemon 6 x 330ml NRB', 99.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 148--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product148.jpg" alt="Product 148" class="product-image" id="productImage148">
+    <h3>Savanna Light 24 x 330ml NRB</h3>
+    <p><strong>R 439.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Savanna Light 24 x 330ml NRB', 439.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 149--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product149.jpg" alt="Product 149" class="product-image" id="productImage149">
+    <h3>Hunters Gold 6 x 330ml NRB</h3>
+    <p><strong>R 99.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Gold 6 x 330ml NRB', 99.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 150--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product150.jpg" alt="Product 150" class="product-image" id="productImage150">
+    <h3>Heineken Silver 6 x 440ml CANS</h3>
+    <p><strong>R 119.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Heineken Silver 6 x 440ml CANS', 119.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 151--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product151.jpg" alt="Product 151" class="product-image" id="productImage151">
+    <h3>Heineken Silver 24 x 440ml CAN</h3>
+    <p><strong>R 439.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Heineken Silver 24 x 440ml CAN', 439.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 152--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product152.jpg" alt="Product 152" class="product-image" id="productImage152">
+    <h3>Amstel Lager 24 x 330ml NRB</h3>
+    <p><strong>R 289.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Amstel Lager 24 x 330ml NRB', 289.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 153--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product153.jpg" alt="Product 153" class="product-image" id="productImage153">
+    <h3>Amstel Lager 24 x 440ml CANS</h3>
+    <p><strong>R 379.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Amstel Lager 24 x 440ml CANS', 379.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 154--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product154.jpg" alt="Product 154" class="product-image" id="productImage154">
+    <h3>Amstel Lager 6 x 440ml CANS</h3>
+    <p><strong>R 104.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Amstel Lager 6 x 440ml CANS', 104.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 155--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product155.jpg" alt="Product 155" class="product-image" id="productImage155">
+    <h3>Heineken Lager 24 x 500ml CANS</h3>
+    <p><strong>R 449.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Heineken Lager 24 x 500ml CANS', 449.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 156--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product156.jpg" alt="Product 156" class="product-image" id="productImage156">
+    <h3>Heineken Lager 6 x 500ml CANS</h3>
+    <p><strong>R 124.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Heineken Lager 6 x 500ml CANS', 124.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 157--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product157.jpg" alt="Product 140" class="product-image" id="productImage157">
+    <h3>Heineken Lager 6 x 330ml NRB</h3>
+    <p><strong>R 104.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Heineken Lager 6 x 330ml NRB', 104.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 158--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product158.jpg" alt="Product 158" class="product-image" id="productImage158">
+    <h3>Tafel Lager 24 x 330ml NRB</h3>
+    <p><strong>R 279.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Tafel Lager 24 x 330ml NRB', 279.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 159--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product159.jpg" alt="Product 159" class="product-image" id="productImage159">
+    <h3>Tafel Lager 6 x 330ml NRB</h3>
+    <p><strong>R 84.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Tafel Lager 6 x 330ml NRB', 84.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 160--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product160.jpg" alt="Product 160" class="product-image" id="productImage160">
+    <h3>Black Crown Gin & Dry Lemon 6 x 275ml NRB</h3>
+    <p><strong>R 104.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Black Crown Gin & Dry Lemon 6 x 275ml NRB', 104.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 161--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product161.jpg" alt="Product 161" class="product-image" id="productImage161">
+    <h3>Castle Double Malt 6 x 330ml NRB</h3>
+    <p><strong>R 99.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Double Malt 6 x 330ml NRB', 99.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 162--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product162.jpg" alt="Product 162" class="product-image" id="productImage162">
+    <h3>Stella Artois 12 x 620ml NRB</h3>
+    <p><strong>R 289.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Stella Artois 12 x 620ml NRB', 289.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 163--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product163.jpg" alt="Product 163" class="product-image" id="productImage163">
+    <h3>Redsquare Pink Ice 275ml NRB</h3>
+    <p><strong>R 439.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Redsquare Pink Ice 24 x 275ml NRB', 439.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 164--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product164.jpg" alt="Product 164" class="product-image" id="productImage164">
+    <h3>Robertson Chapel Sweet Rose 750ml</h3>
+    <p><strong>R 64.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Robertson Chapel Sweet Rose 750ml<NRB', 64.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 165--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product165.jpg" alt="Product 165" class="product-image" id="productImage165">
+    <h3>Barcadi Breezer Blackberry 24 x 275ml NRB</h3>
+    <p><strong>R 449.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Barcadi Breezer Blackberry 24 x 275ml NRB', 449.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 166--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product166.jpg" alt="Product 166" class="product-image" id="productImage166">
+    <h3>Barcadi Breezer Blackberry 6 x 275ml NRB</h3>
+    <p><strong>R 124.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Barcadi Breezer Blackberry 6 x 275ml NRB', 124.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 167--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product167.jpg" alt="Product 167" class="product-image" id="productImage167">
+    <h3>Robertson Winery Natural Sweet Rose 750ml</h3>
+    <p><strong>R 74.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Robertson Winery Natural Sweet Rose 750ml', 74.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 168--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product168.jpg" alt="Product 168" class="product-image" id="productImage168">
+    <h3>Castle Lager 24 x 500ml CANS</h3>
+    <p><strong>R 319.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Lager 24 x 500ml CANS', 319.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 169--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product169.jpg" alt="Product 169" class="product-image" id="productImage169">
+    <h3>Castle Lager 6 x 500ml CANS</h3>
+    <p><strong>R 94.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Lager 6 x 500ml CANS', 94.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 170--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product170.jpg" alt="Product 170" class="product-image" id="productImage170">
+    <h3>Strongbow Red Berries 24 x 330ml NRB</h3>
+    <p><strong>R 359.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Strongbow Red Berries 24 x 330ml NRB', 359.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 171--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product171.jpg" alt="Product 171" class="product-image" id="productImage171">
+    <h3>Strongbow Red Berries 6 x 330ml NRB</h3>
+    <p><strong>R 99.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Strongbow Red Berries 6 x 330ml NRB', 99.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 172--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product172.jpg" alt="Product 172" class="product-image" id="productImage172">
+    <h3>KWV Brandy & Cola 24 x 275ml NRB</h3>
+    <p><strong>R 499.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('KWV Brandy & Cola 24 x 275ml NRB', 499.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 173--->
+	<div class="product" data-category="Whisky">
+    <img src="products/liquorstore/product173.jpg" alt="Product 173" class="product-image" id="productImage173">
+    <h3>Jameson Whisky 750ml</h3>
+    <p><strong>R 339.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Jameson Whisky 750ml', 339.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 174--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product174.jpg" alt="Product 174" class="product-image" id="productImage174">
+    <h3>Belgravia Gin & Pink Tonic 24 x 275ml NRB</h3>
+    <p><strong>R 399.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Belgravia Gin & Pink Tonic x 275ml NRB', 399.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 175--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product175.jpg" alt="Product 175" class="product-image" id="productImage175">
+    <h3>Belgravia Gin & Tonic 24 x 440ml CANS</h3>
+    <p><strong>R 509.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Belgravia Gin & Tonic 24 x 440ml CANS', 509.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 176--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product176.jpg" alt="Product 176" class="product-image" id="productImage176">
+    <h3>Miller Gen Draft 24 x 330ml NRB</h3>
+    <p><strong>R 339.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Miller Gen Draft 24 x 330ml NRB', 339.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 177--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product177.jpg" alt="Product 177" class="product-image" id="productImage177">
+    <h3>Strongbow Red Berries 6 x 440ml CANS</h3>
+    <p><strong>R 114.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Strongbow Red Berries 6 x 440ml CANS', 114.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 178--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product178.jpg" alt="Product 178" class="product-image" id="productImage178">
+    <h3>Miller Gen Draft 6 x 330ml NRB</h3>
+    <p><strong>R 94.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Miller Gen Draft 6 x 330ml NRB', 94.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 179--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product179.jpg" alt="Product 179" class="product-image" id="productImage179">
+    <h3>Strongbow Red Berries 24 x 440ml CANS</h3>
+    <p><strong>R 369.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Strongbow Red Berries 24 x 440ml CANS', 369.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 180--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product180.jpg" alt="Product 180" class="product-image" id="productImage180">
+    <h3>Strongbow Gold 24 x 440ml CANS</h3>
+    <p><strong>R 369.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Strongbow Gold 24 x 440ml CANS', 369.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+
+
+<!---PRODUCT 181--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product181.jpg" alt="Product 181" class="product-image" id="productImage181">
+    <h3>Strongbow Gold 6 x 440ml CANS</h3>
+    <p><strong>R 114.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Strongbow Gold 6 x 440ml CANS', 114.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 182--->
+	<div class="product" data-category="CreamLiqueur">
+    <img src="products/liquorstore/product182.jpg" alt="Product 182" class="product-image" id="productImage182">
+    <h3>Klipdrift Copper Royale Liqueur 750ml</h3>
+    <p><strong>R 134.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Klipdrift Copper Royale Liqueur 750ml', 134.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 183--->
+	<div class="product" data-category="Wine">
+    <img src="products/liquorstore/product183.jpg" alt="Product 183" class="product-image" id="productImage183">
+    <h3>Nederburg Baronne 750ml</h3>
+    <p><strong>R 64.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Nederburg Baronne 750ml', 64.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 184--->
+	<div class="product" data-category="Champagne">
+    <img src="products/liquorstore/product184.jpg" alt="Product 184" class="product-image" id="productImage184">
+    <h3>JC Le Roux La Domaine 750ml</h3>
+    <p><strong>R 94.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('JC Le Roux La Domaine 750ml', 94.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 185--->
+	<div class="product" data-category="Champagne">
+    <img src="products/liquorstore/product185.jpg" alt="Product 185" class="product-image" id="productImage185">
+    <h3>JC Le Roux La Fleurette 750ml</h3>
+    <p><strong>R 94.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('JC Le Roux La Fleurette 750ml', 94.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 186--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product186.jpg" alt="Product 186" class="product-image" id="productImage186">
+    <h3>Redsquare Purple Ice 6 x 275ml NRB</h3>
+    <p><strong>R 119.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Redsquare Purple Ice 6 x 275ml NRB', 119.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 187--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product187.jpg" alt="Product 187" class="product-image" id="productImage187">
+    <h3>Redsquare Blue Ice 24 x 275ml NRB</h3>
+    <p><strong>R 439.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Redsquare Blue ice 24 x 275ml NRB', 439.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 188--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product188.jpg" alt="Product 188" class="product-image" id="productImage188">
+    <h3>Redsquare Red Ice 24 x 275ml NRB</h3>
+    <p><strong>R 439.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Redsquare Red Ice 24 x 275ml NRB', 439.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 189--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product189.jpg" alt="Product 189" class="product-image" id="productImage189">
+    <h3>Ice Tropez Original 6 x 275ml NRB</h3>
+    <p><strong>R 439.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Ice Tropez Original 6 x 275ml', 439.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 190--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product190.jpg" alt="Product 190" class="product-image" id="productImage190">
+    <h3>Belgravia Gin & Blue Tonic 6 x 275ml NRB</h3>
+    <p><strong>R 124.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Belgravia Gin & Blue Tonic 6 x 275ml NRB', 124.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 191--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product191.jpg" alt="Product 191" class="product-image" id="productImage191">
+    <h3>Barcadi Breezer Blackberry 24 x 440ml CANS</h3>
+    <p><strong>R 529.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Barcadi Breezer Blackberry 24 x 440ml CANS', 529.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 192--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product192.jpg" alt="Product 192" class="product-image" id="productImage192">
+    <h3>Barcadi Breezer Blackberry 6 x 440ml CANS</h3>
+    <p><strong>R 159.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Barcadi Breezer Blackberry 6 x 440ml CANS', 159.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 193--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product193.jpg" alt="Product 193" class="product-image" id="productImage193">
+    <h3>Hunters Gold 6 x 440ml CANS</h3>
+    <p><strong>R 109.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Gold 6 x 440ml CANS', 109.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 194--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product194.jpg" alt="Product 194" class="product-image" id="productImage194">
+    <h3>Hunters Dry 24 x 440ml CANS</h3>
+    <p><strong>R 479.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Hunters Dry 24 x 440ml CANS', 479.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 195--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product195.jpg" alt="Product 195" class="product-image" id="productImage195">
+    <h3>Windhoek Draught 6 x 440ml NRB</h3>
+    <p><strong>R 114.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Windhoek Draught 6 x 440ml NRB', 114.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 196--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product196.jpg" alt="Product 196" class="product-image" id="productImage196">
+    <h3>Windhoek Draught 24 x 440ml CANS</h3>
+    <p><strong>R 409.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Windhoek Draught 24 x 440ml CANS', 409.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 197--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product197.jpg" alt="Product 197" class="product-image" id="productImage197">
+    <h3>Windhoek Draught 6 x 440ml CANS</h3>
+    <p><strong>R 114.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Windhoek Draught 6 x 440ml CANS', 114.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 198--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product198.jpg" alt="Product 198" class="product-image" id="productImage198">
+    <h3>Heineken Zero Alc 24 x 330ml NRB</h3>
+    <p><strong>R 369.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Heineken Zero Alc 24 x 330ml NRB', 369.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 199--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product199.jpg" alt="Product 199" class="product-image" id="productImage199">
+    <h3>SOL Cerveza Mexican 24 x 330ml NRB</h3>
+    <p><strong>R 379.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('SOL Cerveza Mexican 24 x 330ml NRB', 379.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 200--->
+	<div class="product" data-category="Spritzer">
+    <img src="products/liquorstore/product200.jpg" alt="Product 200" class="product-image" id="productImage200">
+    <h3>Bernini Blush 6 x 275ml NRB</h3>
+    <p><strong>R 89.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Bernini Blush 6 x 275ml NRB', 89.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 201--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product201.jpg" alt="Product 201" class="product-image" id="productImage201">
+    <h3>Extreme Apple Ale 24 x 275ml NRB</h3>
+    <p><strong>R 429.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Extreme Apple Ale 24 x 275ml NRB', 429.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 202--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product202.jpg" alt="Product 202" class="product-image" id="productImage202">
+    <h3>Extreme Apple Ale 4 x 440ml CANS</h3>
+    <p><strong>R 109.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Extreme Apple Ale 4 x 440ml CANS', 109.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 203--->
+	<div class="product" data-category="Cider">
+    <img src="products/liquorstore/product203.jpg" alt="Product 203" class="product-image" id="productImage203">
+    <h3>Extreme Apple Ale 6 x 300ml CANS</h3>
+    <p><strong>R 119.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Extreme Apple Ale 6 x 300ml CANS', 119.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 204--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product204.jpg" alt="Product 204" class="product-image" id="productImage204">
+    <h3>Belgravia Gin & Blue Ice 24 x 275ml NRB</h3>
+    <p><strong>R 399.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Belgravia Gin & Blue Ice 24 x 275ml NRB', 399.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 205--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product205.jpg" alt="Product 205" class="product-image" id="productImage205">
+    <h3>Castle Milk Stout 24 x 330ml NRB</h3>
+    <p><strong>R 269.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Milk Stout 24 x 330ml CANS', 269.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 206--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product206.jpg" alt="Product 206" class="product-image" id="productImage206">
+    <h3>Castle Milk Stout 6 x 330ml NRB</h3>
+    <p><strong>R 89.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Milk Stout 6 x 330ml NRB', 89.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 207--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product207.jpg" alt="Product 207" class="product-image" id="productImage207">
+    <h3>Castle Double Malt 24 x 330ml NRB</h3>
+    <p><strong>R 269.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Double Malt 24 x 330ml NRB', 269.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 208--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product208.jpg" alt="Product 208" class="product-image" id="productImage208">
+    <h3>Castle Double Malt 24 x 410ml CANS</h3>
+    <p><strong>R 309.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Double Malt 24 x 410ml CANS', 309.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 209--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product209.jpg" alt="Product 209" class="product-image" id="productImage209">
+    <h3>Castle Lite 24 x 410ml CANS</h3>
+    <p><strong>R 309.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Lite 24 x 410ml CANS', 309.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 210--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product210.jpg" alt="Product 210" class="product-image" id="productImage210">
+    <h3>Castle Lite 6 x 330ml NRB</h3>
+    <p><strong>R 79.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Lite 6 x 330ml NRB', 79.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 211--->
+	<div class="product" data-category="Spiritcooler">
+    <img src="products/liquorstore/product211.jpg" alt="Product 211" class="product-image" id="productImage211">
+    <h3>Black Crown Gin & Tonic 6 x 440ml CANS</h3>
+    <p><strong>R 129.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Black Crown Gin & Tonic 6 x 440ml CANS', 129.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 212--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product212.jpg" alt="Product 212" class="product-image" id="productImage212">
+    <h3>Stella Artois 6 x 410ml CANS</h3>
+    <p><strong>R 119.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Stella Artois 6 x 410ml CANS', 119.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 213--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product213.jpg" alt="Product 213" class="product-image" id="productImage213">
+    <h3>Castle Double Malt 6 x 410ml CANS</h3>
+    <p><strong>R 114.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Castle Double Malt 6 x 410ml CANS', 114.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+<!---PRODUCT 214--->
+	<div class="product" data-category="Beer">
+    <img src="products/liquorstore/product214.jpg" alt="Product 214" class="product-image" id="productImage214">
+    <h3>Heineken Zero 6 x 330ml NRB</h3>
+    <p><strong>R 104.99</strong></p>
+    <!---cart button--->
+    <button onclick="addToCart('Heineken Zero 6 x 330ml NRB', 104.99)"
+    class="add-to-cart-button">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+</section>
+
+    </main> 
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+        <button onclick="clearCart()" >Clear Cart</button>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</div>
+
+
+    <script src="assets/js/script.js"></script> 
+    
+    <footer class="footer">
+    <div class="footer-icons">
+        <a href="index.html" class="footer-icon">
+            <img src="assets/img/footericons/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+        
+        <a href="#searchInput" class="footer-icon">
+            <img src="assets/img/footericons/search.png" alt="Search">
+            <span>Search</span>
+        </a>
+
+        <a href="https://wa.me/27726962588" class="footer-icon">
+            <img src="assets/img/footericons/whatsapp.png" alt="Contact">
+            <span>Whatsapp</span>
+        </a>
+        <a href="profile.php" class="footer-icon">
+            <img src="assets/img/footericons/account.png" alt="Contact">
+            <span>Account</span>
+        </a>
+    </div>
+</footer>
+</body>
+</html>
