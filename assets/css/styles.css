@@ -382,17 +382,17 @@ h1 {
     margin-bottom: 20px;
 }
 
- #search-container {
+#search-container {
     display: flex;
-    flex-direction: center;
-    align-items: center;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the items vertically */
     width: 85%;
     max-width: 500px; /* Adjust max-width as needed */
     padding: 0 25px;
-    margin-top: 100px;
+    margin: 100px auto 0; /* Center the container and add margin at the top */
 }
 
- #search-input {
+#search-input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -418,14 +418,16 @@ button:hover {
     background-color: #0056b3;
 }
 
-#search-results {
-    margin-top: 20px;
-    width: 300px;
+#results {
+    margin-top: 1px;
+    width: 85%; /* Same width as search container */
+    max-width: 500px; /* Same max-width as search container */
     background-color: white;
-    border: 1px solid #ccc;
+    border: 0px solid white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px;
     padding: 10px;
+    margin: 20px auto; /* Center the results horizontally on all devices */
 }
 
 .cta-button {
