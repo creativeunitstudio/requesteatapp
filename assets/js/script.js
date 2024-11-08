@@ -1,75 +1,5 @@
 let cart = [];
 
-document.getElementById('hamburger').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
-});
-
-document.getElementById('close').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    menu.classList.remove('show');
-});
-
-function addToCart(productName, price) {
-    cart.push({ name: productName, price: price });
-    alert(`${productName} added to cart!`);
-}
-
-function viewCart() {
-    if (cart.length === 0) {
-        alert("Your cart is empty.");
-    } else {
-        let cartItems = "Your Cart:\n";
-        cart.forEach(item => {
-            cartItems += `${item.name}: R${item.price}\n`;
-        });
-        alert(cartItems);
-    }
-}
-
-// Initialize or retrieve the cart from local storage
-function getCart() {
-    const cart = localStorage.getItem('cart');
-    return cart ? JSON.parse(cart) : [];
-}
-
-// Save the cart to local storage
-function saveCart(cart) {
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
-
-// Add item to cart
-function addToCart(productName, price) {
-    const cart = getCart();
-    const existingProductIndex = cart.findIndex(item => item.name === productName);
-
-    if (existingProductIndex > -1) {
-        // If product already exists, increase the quantity
-        cart[existingProductIndex].quantity += 1;
-    } else {
-        // If product is new, add it to the cart
-        cart.push({ name: productName, price: price, quantity: 1 });
-    }
-
-    saveCart(cart);
-    alert(`${productName} has been added to your cart.`);
-}
-
-// View cart function
-function viewCart() {
-    const cart = getCart();
-    if (cart.length === 0) {
-        alert('Your cart is empty.');
-        return;
-    }
-
-    let cartContent = 'Your Cart:\n';
-    cart.forEach(item => {
-        cartContent += `${item.name} - R ${item.price} x ${item.quantity}\n`;
-    });
-    alert(cartContent);
-}
-
 // Initialize or retrieve the cart from local storage
 function getCart() {
     const cart = localStorage.getItem('cart');
@@ -104,31 +34,60 @@ function viewCart() {
     const cart = getCart();
     const cartItemsContainer = document.getElementById('cartItems');
     const cartTotalContainer = document.getElementById('cartTotal');
+    const emptyCartMessage = document.getElementById('emptyCartMessage');
+    const cartSummary = document.querySelector('.cart-summary');
+    const billingAddress = document.querySelector('.billing-address');
+    const paymentMethods = document.querySelector('.payment-methods');
+    const deliveryOptions = document.querySelector('.delivery-options');
+    const placeOrderBtn = document.getElementById('placeOrderBtn');
+    
     cartItemsContainer.innerHTML = ''; // Clear previous items
-
     let total = 0;
 
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = 'Your cart is empty.';
+        // Show empty cart message and hide other sections
+        emptyCartMessage.style.display = 'none';
+        cartSummary.style.display = 'none';
+        billingAddress.style.display = 'none';
+        paymentMethods.style.display = 'none';
+        deliveryOptions.style.display = 'none';
         cartTotalContainer.innerHTML = 'Total: R 0.00';
+        placeOrderBtn.disabled = true;
     } else {
+        // Show cart items and update total
+        emptyCartMessage.style.display = 'none';
+        cartSummary.style.display = 'block';
+        billingAddress.style.display = 'block';
+        paymentMethods.style.display = 'block';
+        deliveryOptions.style.display = 'block';
+
         cart.forEach(item => {
-            const itemTotal = item.price * item.quantity;
-            total += itemTotal;
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
 
-            const cartItemDiv = document.createElement('div');
-            cartItemDiv.className = 'cart-item';
-            cartItemDiv.innerHTML = `
-                ${item.name} - R ${item.price} x ${item.quantity} = R ${itemTotal.toFixed(2)}
-                <button onclick="changeQuantity('${item.name}', -1)">-</button>
-				<button onclick="changeQuantity('${item.name}', 1)">+</button>
-            `;
-            cartItemsContainer.appendChild(cartItemDiv);
-        });
+    const cartItemDiv = document.createElement('div');
+    cartItemDiv.className = 'cart-item';
+
+    // Create a div for product details and quantity buttons to ensure alignment
+    cartItemDiv.innerHTML = `
+        <div class="cart-item-details">
+            <span class="cart-item-name">${item.name} - R ${item.price} x ${item.quantity} = R ${itemTotal.toFixed(2)}</span>
+            <div class="quantity-buttons">
+                <button class="quantity-btn" onclick="changeQuantity('${item.name}', -1)">-</button>
+                <button class="quantity-btn" onclick="changeQuantity('${item.name}', 1)">+</button>
+            </div>
+        </div>
+    `;
+    cartItemsContainer.appendChild(cartItemDiv);
+});
+
+
         cartTotalContainer.innerHTML = `Total: R ${total.toFixed(2)}`;
+        updatePlaceOrderButton(); // Update the Place Order button
     }
-
+    
     document.getElementById('cartModal').style.display = 'block';
+    updatePlaceOrderButton(); // Update Place Order button state
 }
 
 // Change quantity of cart items
@@ -153,10 +112,104 @@ function clearCart() {
     viewCart(); // Refresh cart view
 }
 
-// Checkout function (placeholder)
-function checkout() {
-    alert('Checkout feature is not implemented yet.');
-    // You can redirect to a checkout page or implement further logic here
+// Update Delivery Cost based on the selected option
+function updateDeliveryCost() {
+	const cart = getCart(); // Get the current cart items
+    const deliveryOption = document.getElementById('deliveryOption').value; // Get selected delivery option from dropdown
+    let additionalCost = 0;
+
+    if (deliveryOption === 'delivery') {
+        additionalCost = 19.99; // Example delivery cost
+    }
+
+    // Display delivery cost
+    const deliveryCostElement = document.getElementById('additionalCost');
+    if (additionalCost) {
+        deliveryCostElement.style.display = 'block';
+        deliveryCostElement.textContent = `Delivery Cost: R ${additionalCost.toFixed(2)}`;
+    } else {
+        deliveryCostElement.style.display = 'none';
+    }
+
+    // Recalculate total with delivery cost
+    let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0) + additionalCost;
+    document.getElementById('cartTotal').textContent = `Total: R ${total.toFixed(2)}`;
+
+    updatePlaceOrderButton();
+}
+
+// Update Payment Method details when selected
+function updatePaymentDetails() {
+    const paymentMethod = document.getElementById('paymentMethod').value; // Get selected payment method from dropdown
+
+    // Show details based on selected payment method
+    if (paymentMethod === 'directTransfer') {
+        document.getElementById('bankDetails').style.display = 'block';
+        document.getElementById('paypalDetails').style.display = 'none';
+    } else if (paymentMethod === 'paypal') {
+        document.getElementById('paypalDetails').style.display = 'block';
+        document.getElementById('bankDetails').style.display = 'none';
+    }
+}
+
+// Enable or disable the Place Order button based on form input validity
+function updatePlaceOrderButton() {
+    // Get the values of the input fields and dropdowns
+    const billingName = document.getElementById('billingName').value.trim();
+    const billingEmail = document.getElementById('billingEmail').value.trim();
+    const billingAddress = document.getElementById('billingAddress').value.trim();
+    const billingPhone = document.getElementById('billingPhone').value.trim();
+    const paymentMethod = document.getElementById('paymentMethod').value;
+    const deliveryOption = document.getElementById('deliveryOption').value;
+
+    // Check if all fields are filled and if a payment method and delivery option are selected
+    const isFormValid = billingName && billingEmail && billingAddress && billingPhone && paymentMethod && deliveryOption;
+
+    // Enable or disable the Place Order button based on the form validity
+    document.getElementById('placeOrderBtn').disabled = !isFormValid;
+}
+
+
+// Handle the "Place Order" action
+function placeOrder() {
+    const cart = getCart();
+    const billingName = document.getElementById('billingName').value;
+    const billingEmail = document.getElementById('billingEmail').value;
+    const billingAddress = document.getElementById('billingAddress').value;
+    const billingPhone = document.getElementById('billingPhone').value;
+    const paymentMethod = document.getElementById('paymentMethod').value; // Get selected payment method
+    const deliveryOption = document.getElementById('deliveryOption').value; // Get selected delivery option
+
+    if (cart.length === 0) {
+        alert("Your cart is empty. Please add items before checking out.");
+        return;
+    }
+
+    let message = `Hello! I would like to place an order for the following items:\n\n`;
+    let total = 0;
+
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        message += `${item.name} - R ${item.price} x ${item.quantity} = R ${itemTotal.toFixed(2)}\n`;
+    });
+
+    const additionalCost = deliveryOption === 'delivery' ? 50 : 0;
+    message += `\nDelivery: ${deliveryOption} (R ${additionalCost.toFixed(2)})\n`;
+    message += `\nTotal: R ${(total + additionalCost).toFixed(2)}\n`;
+    message += `\nBilling Info:\nName: ${billingName}\nEmail: ${billingEmail}\nAddress: ${billingAddress}\nPhone: ${billingPhone}\n`;
+    message += `Payment Method: ${paymentMethod}\n`;
+
+    // Encode the message for WhatsApp
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappLink = `https://wa.me/27726962588?text=${encodedMessage}`;
+
+    // Open WhatsApp link in a new tab
+    window.open(whatsappLink, '_blank');
+
+    // Clear the cart after placing the order
+    localStorage.removeItem('cart');
+    alert("Your order has been placed!");
 }
 
 // Close cart modal
@@ -172,53 +225,17 @@ window.onclick = function(event) {
     }
 }
 
-//WHATSAPP DETAILS IN//
-
-// Function to checkout via WhatsApp
-function checkout() {
-    const cart = getCart();
-    if (cart.length === 0) {
-        alert("Your cart is empty. Please add items before checking out.");
-        return;
-    }
-
-    let message = "Hello! I would like to place an order for the following items:\n\n";
-    let total = 0;
-
-    cart.forEach(item => {
-        const itemTotal = item.price * item.quantity;
-        total += itemTotal;
-        message += `${item.name} - R ${item.price} x ${item.quantity} = R ${itemTotal.toFixed(2)}\n`;
-    });
-
-    message += `\nTotal: R ${total.toFixed(2)}\n`;
-    message += "Please confirm my order.";
-
-    // Encode the message for URL
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappLink = `https://wa.me/27726962588?text=${encodedMessage}`;
-
-    // Open WhatsApp link in a new tab
-    window.open(whatsappLink, '_blank');
-}
-
-document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const whatsapp = document.getElementById('whatsapp').value;
-    const address = document.getElementById('address').value;
-
-    const message = `Name: ${name}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nAddress: ${address}`;
-    const whatsappNumber = '27726962588'; // Replace with your WhatsApp number
-    const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-    
-    window.open(url, '_blank');
+// Hamburger menu for mobile view
+document.getElementById('hamburger').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
 });
 
-//WHATSAPP DETAILS OUT//
-
+// Close menu
+document.getElementById('close').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.remove('show');
+});
 
 
 function filterProducts() {
