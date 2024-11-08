@@ -1982,10 +1982,69 @@ Vicks Lozenges Honey Lemon 24s', 92.99)" class="add-to-cart-button">Add to Cart<
     <div class="modal-content">
         <span class="close" onclick="closeCart()">&times;</span>
         <h2>Your Cart</h2>
+        
+        <!-- Cart Items Section -->
         <div id="cartItems"></div>
         <div id="cartTotal" class="cart-total">Total: R 0.00</div>
-        <button onclick="clearCart()" >Clear Cart</button>
-        <button onclick="checkout()">Checkout</button>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div id="summaryItems"></div> <!-- Will populate dynamically -->
+            <div id="additionalCost" style="display: none;">Delivery Cost: R 0.00</div> <!-- Delivery Cost will show based on selection -->
+        </div>
+
+        <!-- Billing Address Form -->
+        <div class="billing-address">
+            <h3>Billing Address</h3>
+            <input type="text" id="billingName" placeholder="Full Name" required>
+            <input type="email" id="billingEmail" placeholder="Email" required>
+            <input type="text" id="billingAddress" placeholder="Address" required>
+            <input type="tel" id="billingPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Payment Methods (Updated to Dropdown) -->
+        <div class="payment-methods">
+            <h3>Payment Method</h3>
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" onchange="updatePaymentDetails()">
+                <option value="directTransfer">Direct Transfer</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <div id="bankDetails" style="display: none;">
+                <h4>Banking Details</h4>
+                <p>Bank Name: Capitec Bank</p>
+                <p>Account Number: 1444105424</p>
+                <p>SWIFT Code: 40017</p>
+            </div>
+
+            <div id="paypalDetails" style="display: none;">
+                <h4>PayPal Account</h4>
+                <p>Account Email: requesteat@paypal.com</p>
+            </div>
+        </div>
+
+        <!-- Delivery or Pickup Options (Updated to Dropdown) -->
+        <div class="delivery-options">
+            <h3>Delivery Options</h3>
+            <label for="deliveryOption">Select Delivery Option</label>
+            <select id="deliveryOption" onchange="updateDeliveryCost()">
+                <option value="pickup">Pickup (No additional cost)</option>
+                <option value="delivery">Delivery (Additional Cost)</option>
+            </select>
+        </div>
+
+        <!-- Place Order Button -->
+        <button id="placeOrderBtn" onclick="placeOrder()" class="cart-button place-order-button" disabled>Place Order</button>
+        <button onclick="clearCart()" class="cart-button clear-button">🗑️ Clear My Cart</button>
+    </div>
+	
+	<!-- Shop Now Button (when cart is empty) -->
+        <div id="emptyCartMessage" style="display: none;">
+            <p>Your cart is empty.</p>
+            <a href="index.html" class="shop-now-button">Shop Now</a>
+        </div>
     </div>
 </div>
 
