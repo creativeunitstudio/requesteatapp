@@ -308,6 +308,22 @@ header {
     right: 20px;
 }
 
+.close-button {
+    background-color: rgb(14, 59, 2); /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around the text */
+    text-align: center; /* Centered text */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #218838; /* Darker red on hover */
+}
+
 .close:hover,
 .close:focus {
     color: black;
@@ -452,7 +468,7 @@ h1 {
 }
 
 #search-input:focus {
-    border-color: #0056b3;
+    border-color: rgb(14, 59, 2);
 }
 
 button {
